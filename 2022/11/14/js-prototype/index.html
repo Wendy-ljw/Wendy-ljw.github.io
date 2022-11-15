@@ -19,13 +19,13 @@
 <meta property="og:site_name" content="Wendy">
 <meta property="og:description" content="原型与原型链原型：被用于复制现有实例来生成新实例的函数 原型链：每个构造函数都有一个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的内部指针。那么假如我们让原型对象等于另一个类型的实例，结果会怎样？显然，此时的原型对象将包含一个指向另一个原型的指针，相应地，另一个原型中也包含着一个指向另一个构造函数的指针。假如另一个原型又是另一个类型的实例，那么上述关系依然成立。如此">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://wendy-ljw.github.io/assets/js-pro01.png">
+<meta property="og:image" content="https://wendy-ljw.github.io/assets/js/js-pro01.png">
 <meta property="article:published_time" content="2022-11-14T09:44:36.000Z">
-<meta property="article:modified_time" content="2022-11-14T12:34:17.755Z">
+<meta property="article:modified_time" content="2022-11-15T10:20:58.541Z">
 <meta property="article:author" content="Wendy">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wendy-ljw.github.io/assets/js-pro01.png">
+<meta name="twitter:image" content="https://wendy-ljw.github.io/assets/js/js-pro01.png">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
@@ -37,9 +37,9 @@
     
         <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3763712_by4sjqrtp9w.css">
     
-    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1668430837909">
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1668430837909">
-    <link rel="stylesheet" href="/css/style.css?v=1668430837909">
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1668507847956">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1668507847956">
+    <link rel="stylesheet" href="/css/style.css?v=1668507847956">
      
     
         <link rel="stylesheet" href="/custom.css">
@@ -67,8 +67,8 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>3</div>
-        <div><span>标签</span>3</div>
+        <div><span>文章</span>4</div>
+        <div><span>标签</span>4</div>
         <div><span>分类</span>3</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
@@ -136,14 +136,7 @@
         
 
         <li class="category-list-item">
-          <a class="category-list-link" href="/categories/javascript/">javascript</a>
-          <span class="category-list-count">1</span>
-        </li>
-
-        
-
-        <li class="category-list-item">
-          <a class="category-list-link" href="/categories/markdown/">markdown</a>
+          <a class="category-list-link" href="/categories/总结/">总结</a>
           <span class="category-list-count">1</span>
         </li>
 
@@ -152,6 +145,13 @@
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/种类/">种类</a>
           <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/笔记/">笔记</a>
+          <span class="category-list-count">2</span>
         </li>
 
         
@@ -165,7 +165,7 @@
     
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">标签</a>
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">标签</a>
     </div>
     
   </div>
@@ -242,7 +242,7 @@
 <blockquote>
 <p>整个查找过程都是顺着__proto__属性，一步一步往上查找，形成了像链条一样的结构，这个结构，就是原型链。所以，原型链也叫作隐式原型链。</p>
 </blockquote>
-<p><img data-fancybox="gallery" src="/assets/js-pro01.png" alt="原型链" data-caption="原型链" loading="lazy"></p>
+<p><img data-fancybox="gallery" src="/assets/js/js-pro01.png" alt="原型链" data-caption="原型链" loading="lazy"></p>
 <hr>
 <h2 id="检查属性函数"><a href="#检查属性函数" class="headerlink" title="检查属性函数"></a>检查属性函数</h2><ul>
 <li>使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有，也会返回true<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-keyword">in</span> person) <span class="hljs-comment">//true</span><br></code></pre></td></tr></table></figure></li>
@@ -266,7 +266,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow">
     
-        <a class="nexmoefont icon-appstore-fill -link" href="/categories/javascript/">javascript</a>
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
     
     
         <a class="nexmoefont icon-tag-fill -none-link" href="/tags/javascript/" rel="tag">javascript</a>
@@ -325,7 +325,7 @@
 
  
 
-<script async src="/js/app.js?v=1668430837910"></script>
+<script async src="/js/app.js?v=1668507847957"></script>
 
 
 
