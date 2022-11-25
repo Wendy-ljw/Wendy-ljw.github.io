@@ -37,9 +37,9 @@
     
         <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3763712_by4sjqrtp9w.css">
     
-    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1669301333245">
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1669301333245">
-    <link rel="stylesheet" href="/css/style.css?v=1669301333245">
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1669362113295">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1669362113295">
+    <link rel="stylesheet" href="/css/style.css?v=1669362113295">
      
     
         <link rel="stylesheet" href="/custom.css">
@@ -67,8 +67,8 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>8</div>
-        <div><span>标签</span>5</div>
+        <div><span>文章</span>9</div>
+        <div><span>标签</span>6</div>
         <div><span>分类</span>3</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
@@ -151,7 +151,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/笔记/">笔记</a>
-          <span class="category-list-count">6</span>
+          <span class="category-list-count">7</span>
         </li>
 
         
@@ -165,7 +165,7 @@
     
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/es6/" style="font-size: 15px;">es6</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">标签</a>
+      <a href="/tags/es6/" style="font-size: 15px;">es6</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">标签</a>
     </div>
     
   </div>
@@ -206,29 +206,29 @@
 <p>我们所创建的每一格函数，解析器都会向函数中添加一个属性prototype<br>这个属性对应着一个对象，这个对象就是我们所谓的原型对象</p>
 </blockquote>
 <p>打比方说：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params">age</span>) </span>&#123;<br>    <span class="hljs-built_in">this</span>.age = age       <br>&#125;<br>Person.prototype.name = <span class="hljs-string">&#x27;ljw&#x27;</span><br><span class="hljs-keyword">var</span> person1 = <span class="hljs-keyword">new</span> Person()<br><span class="hljs-keyword">var</span> person2 = <span class="hljs-keyword">new</span> Person()<br><span class="hljs-built_in">console</span>.log(person1.name) <span class="hljs-comment">//ljw</span><br><span class="hljs-built_in">console</span>.log(person2.name)  <span class="hljs-comment">//ljw</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">age</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.age = age       </span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.name = <span class="string">&#x27;ljw&#x27;</span></span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person()</span><br><span class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person()</span><br><span class="line"><span class="built_in">console</span>.log(person1.name) <span class="comment">//ljw</span></span><br><span class="line"><span class="built_in">console</span>.log(person2.name)  <span class="comment">//ljw</span></span><br></pre></td></tr></table></figure>
 <p>其中，函数的prototype指向了一个对象，而这个对象正是调用构造函数时创建的实例的原型，也就是person1和person2的原型。</p>
 <hr>
 <h2 id="Proto"><a href="#Proto" class="headerlink" title="_Proto _"></a>_Proto _</h2><p>_Proto _是每一个子对象（除null外）都会有的一个属性，指向该对象的原型</p>
 <blockquote>
 <p>当函数以构造函数的形式调用时，它所创造的对象中都会有一个隐含的属性指向该构造函数的原型对象，我们可以通过_proto_来访问属性</p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params"></span>) </span>&#123;<br><br>&#125;<br><span class="hljs-keyword">var</span> person = <span class="hljs-keyword">new</span> Person();<br><span class="hljs-built_in">console</span>.log(person.__proto__ === Person.prototype); <span class="hljs-comment">// true</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__ === Person.prototype); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 <p>此属性可以访问原型，但并不存在于Person.prototype中，来自于Object.prototype,类似getter&#x2F;setter，即使用obj._proto_时，可以理解为返回Object.getPrototypeOf(obj)</p>
 <hr>
 <h2 id="构造函数constructor"><a href="#构造函数constructor" class="headerlink" title="构造函数constructor"></a>构造函数constructor</h2><p>每个原型都有一个constructor属性，指向该关联的构造函数</p>
 <blockquote>
 <p>如果函数作为普通函数调用prototype没有任何作用  </p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params"></span>) </span>&#123;<br><br>&#125;<br><span class="hljs-built_in">console</span>.log(Person===Person.prototype.constructor)  <span class="hljs-comment">//true</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params"></span>) </span>&#123;<br><br>&#125;<br><br><span class="hljs-keyword">var</span> person = <span class="hljs-keyword">new</span> Person();<br><br><span class="hljs-built_in">console</span>.log(person.__proto__ == Person.prototype) <span class="hljs-comment">// true</span><br><span class="hljs-built_in">console</span>.log(Person.prototype.constructor == Person) <span class="hljs-comment">// true</span><br><span class="hljs-comment">// 顺便学习一个ES5的方法,可以获得对象的原型</span><br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Object</span>.getPrototypeOf(person) === Person.prototype) <span class="hljs-comment">// true</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(Person===Person.prototype.constructor)  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__ == Person.prototype) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype.constructor == Person) <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 顺便学习一个ES5的方法,可以获得对象的原型</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getPrototypeOf(person) === Person.prototype) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 <p>当获取 person.constructor 时，其实 person 中并没有 constructor 属性,当不能读取到constructor 属性时，会从 person 的原型也就是 Person.prototype 中读取，正好原型中有该属性，所以：person.constructor &#x3D;&#x3D;&#x3D; Person.prototype.constructor</p>
 <hr>
 <h2 id="实例与原型"><a href="#实例与原型" class="headerlink" title="实例与原型"></a>实例与原型</h2><p>当读取实例的属性时，如果找不到，就会查找与对象关联的原型中的属性，如果还查不到，就去找原型的原型，一直找到最顶层(也就是Object)为止。</p>
 <blockquote>
 <p>原型对象就相当于一个公共的区域，所有同一个类的实例都可以访问到这个原型对象，我们可以将对象中共有的内容，统一设置到原型对象中</p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params"></span>) </span>&#123;<br><br>&#125;<br><br>Person.prototype.name = <span class="hljs-string">&#x27;Kevin&#x27;</span>;<br><br><span class="hljs-keyword">var</span> person = <span class="hljs-keyword">new</span> Person();<br><br>person.name = <span class="hljs-string">&#x27;Daisy&#x27;</span>;<br><span class="hljs-built_in">console</span>.log(person.name) <span class="hljs-comment">// Daisy</span><br><br><span class="hljs-keyword">delete</span> person.name;<br><span class="hljs-built_in">console</span>.log(person.name) <span class="hljs-comment">// Kevin</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.name = <span class="string">&#x27;Kevin&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line">person.name = <span class="string">&#x27;Daisy&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.name) <span class="comment">// Daisy</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> person.name;</span><br><span class="line"><span class="built_in">console</span>.log(person.name) <span class="comment">// Kevin</span></span><br></pre></td></tr></table></figure>
 <p>在这个例子中，我们给实例对象 person 添加了 name 属性，当我们打印 person.name 的时候，结果自然为 Daisy。<br>但是当我们删除了 person 的 name 属性时，读取 person.name，从 person 对象中找不到 name 属性就会从 person 的原型也就是 person.proto ，也就是 Person.prototype中查找，幸运的是我们找到了 name 属性，结果为 Kevin。</p>
 <hr>
 <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>原型对象也是对象，所以它也有原型，<br>当我们使用一个对象的属性或方法时，会按照以下步骤：</p>
@@ -245,8 +245,8 @@
 <p><img data-fancybox="gallery" src="/assets/js/js-pro01.png" alt="原型链" data-caption="原型链" loading="lazy"></p>
 <hr>
 <h2 id="检查属性函数"><a href="#检查属性函数" class="headerlink" title="检查属性函数"></a>检查属性函数</h2><ul>
-<li>使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有，也会返回true<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-keyword">in</span> person) <span class="hljs-comment">//true</span><br></code></pre></td></tr></table></figure></li>
-<li>使用对象的hasOwnProperty()来检查对象自身中是否含有该属性，只有当对象自身中含有属性时，才会返回true<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;person.hasOwnProperty()&quot;</span>) <span class="hljs-comment">//false</span><br></code></pre></td></tr></table></figure></li>
+<li>使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有，也会返回true<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;name&quot;</span> <span class="keyword">in</span> person) <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li>使用对象的hasOwnProperty()来检查对象自身中是否含有该属性，只有当对象自身中含有属性时，才会返回true<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;person.hasOwnProperty()&quot;</span>) <span class="comment">//false</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 
   </article>
@@ -337,7 +337,7 @@
 
  
 
-<script async src="/js/app.js?v=1669301333247"></script>
+<script async src="/js/app.js?v=1669362113301"></script>
 
 
 

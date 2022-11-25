@@ -57,9 +57,9 @@
     
         <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3763712_by4sjqrtp9w.css">
     
-    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1669301333194">
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1669301333194">
-    <link rel="stylesheet" href="/css/style.css?v=1669301333194">
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1669362113276">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1669362113276">
+    <link rel="stylesheet" href="/css/style.css?v=1669362113276">
      
     
         <link rel="stylesheet" href="/custom.css">
@@ -87,8 +87,8 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>8</div>
-        <div><span>标签</span>5</div>
+        <div><span>文章</span>9</div>
+        <div><span>标签</span>6</div>
         <div><span>分类</span>3</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
@@ -171,7 +171,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/笔记/">笔记</a>
-          <span class="category-list-count">6</span>
+          <span class="category-list-count">7</span>
         </li>
 
         
@@ -185,7 +185,7 @@
     
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/es6/" style="font-size: 15px;">es6</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">标签</a>
+      <a href="/tags/es6/" style="font-size: 15px;">es6</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">标签</a>
     </div>
     
   </div>
@@ -253,88 +253,88 @@
 <li><p>进入要管理的文件夹</p>
 </li>
 <li><p>执行初始化命令</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><code class="hljs csharp">git <span class="hljs-keyword">init</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>管理目录下的文件状态</p>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><code class="hljs fortran">git <span class="hljs-keyword">status</span><br><br>注：新增的文件和修改过后的文件都是红色<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line"></span><br><span class="line">注：新增的文件和修改过后的文件都是红色</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>管理指定文件（红变绿）</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros">git <span class="hljs-builtin-name">add</span> 文件名<br>git <span class="hljs-builtin-name">add</span> .<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add 文件名</span><br><span class="line">git add .</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>个人信息配置：用户名、邮箱 【一次即可】</p>
-<figure class="highlight verilog"><table><tr><td class="code"><pre><code class="hljs verilog">git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.email</span> <span class="hljs-string">&quot;you@example.com&quot;</span><br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.name</span> <span class="hljs-string">&quot;Your Name&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>生成版本</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">git commit -m <span class="hljs-string">&#x27;描述信息&#x27;</span> <span class="hljs-regexp">//</span>单引号中主要放对版本的描述信息，如初稿，版本号等<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#x27;描述信息&#x27; //单引号中主要放对版本的描述信息，如初稿，版本号等</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>查看版本记录</p>
-<figure class="highlight 1c"><table><tr><td class="code"><pre><code class="hljs 1c">git <span class="hljs-built_in">log</span> <br></code></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log </span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="2-2-第二阶段：拓展新功能"><a href="#2-2-第二阶段：拓展新功能" class="headerlink" title="2.2 第二阶段：拓展新功能"></a>2.2 第二阶段：拓展新功能</h3><figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">git <span class="hljs-keyword">add</span> <br>git <span class="hljs-keyword">commit</span> -m <span class="hljs-string">&#x27;短视频&#x27;</span><br></code></pre></td></tr></table></figure>
+<h3 id="2-2-第二阶段：拓展新功能"><a href="#2-2-第二阶段：拓展新功能" class="headerlink" title="2.2 第二阶段：拓展新功能"></a>2.2 第二阶段：拓展新功能</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add </span><br><span class="line">git commit -m &#x27;短视频&#x27;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>新增了有短视频功能的版本</p>
 </blockquote>
 <h3 id="2-3-第三阶段：“约饭事件”"><a href="#2-3-第三阶段：“约饭事件”" class="headerlink" title="2.3 第三阶段：“约饭事件”"></a>2.3 第三阶段：“约饭事件”</h3><ul>
 <li><p>回滚至之前版本</p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">git <span class="hljs-keyword">log</span> <br>git <span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard 版本号</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log </span><br><span class="line">git reset --hard 版本号</span><br></pre></td></tr></table></figure></li>
 </ul>
 <blockquote>
 <p>版本号指的是git log执行后输出的commit后面的一大串字母数字</p>
 </blockquote>
 <ul>
 <li><p>回滚至之后版本</p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">git reflog <br>git <span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard 版本号</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reflog </span><br><span class="line">git reset --hard 版本号</span><br></pre></td></tr></table></figure></li>
 </ul>
 <blockquote>
 <p>这里的版本号是git reflog执行后输出的每一行最前面的一小串字母数字</p>
 </blockquote>
-<h3 id="2-4-小总结"><a href="#2-4-小总结" class="headerlink" title="2.4 小总结"></a>2.4 小总结</h3><figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">git init <br>git <span class="hljs-keyword">add</span> <br>git <span class="hljs-keyword">commit</span> <br>git <span class="hljs-keyword">log</span> <br>git reflog <br>git <span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard 版本号</span><br></code></pre></td></tr></table></figure>
+<h3 id="2-4-小总结"><a href="#2-4-小总结" class="headerlink" title="2.4 小总结"></a>2.4 小总结</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init </span><br><span class="line">git add </span><br><span class="line">git commit </span><br><span class="line">git log </span><br><span class="line">git reflog </span><br><span class="line">git reset --hard 版本号</span><br></pre></td></tr></table></figure>
 
 <p><img data-fancybox="gallery" src="/assets/git/3areas.png" alt="三大区域" data-caption="三大区域" loading="lazy"></p>
 <h3 id="2-5-第四阶段：商城-amp-紧急修复bug"><a href="#2-5-第四阶段：商城-amp-紧急修复bug" class="headerlink" title="2.5 第四阶段：商城&amp;紧急修复bug"></a>2.5 第四阶段：商城&amp;紧急修复bug</h3><h4 id="2-5-1-分支"><a href="#2-5-1-分支" class="headerlink" title="2.5.1  分支"></a>2.5.1  分支</h4><p>分支可以给使用者提供多个环境的可以，意味着你可以把你的工作从开发主线上分离开来，以免影响开发主线。 </p>
 <h4 id="2-5-2-紧急修复bug方案"><a href="#2-5-2-紧急修复bug方案" class="headerlink" title="2.5.2 紧急修复bug方案"></a>2.5.2 紧急修复bug方案</h4><p><img data-fancybox="gallery" src="/assets/git/branch.png" alt="分支" data-caption="分支" loading="lazy"></p>
 <h4 id="2-5-3-命令总结"><a href="#2-5-3-命令总结" class="headerlink" title="2.5.3 命令总结"></a>2.5.3 命令总结</h4><ul>
 <li><p>查看分支</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git branch</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建分支</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><code class="hljs mipsasm">git <span class="hljs-keyword">branch </span>分支名称<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 分支名称</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>切换分支</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> checkout 分支名称<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名称</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>分支合并（可能产生冲突）</p>
-<figure class="highlight cos"><table><tr><td class="code"><pre><code class="hljs cos">git <span class="hljs-keyword">merge</span> 要合并的分支<br><br>注意：切换分支再合并<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git merge 要合并的分支</span><br><span class="line"></span><br><span class="line">注意：切换分支再合并</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>删除分支</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><code class="hljs mipsasm">git <span class="hljs-keyword">branch </span>-d 分支名称<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d 分支名称</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="2-5-4-工作流"><a href="#2-5-4-工作流" class="headerlink" title="2.5.4 工作流"></a>2.5.4 工作流</h4><p><img data-fancybox="gallery" src="/assets/workflows.png" alt="工作流" data-caption="工作流" loading="lazy"></p>
 <h3 id="2-6-第五阶段：进军三里屯"><a href="#2-6-第五阶段：进军三里屯" class="headerlink" title="2.6 第五阶段：进军三里屯"></a>2.6 第五阶段：进军三里屯</h3><p>有钱之后就要造呀，一个人在三里屯买了一层楼做办公室。</p>
 <p><img data-fancybox="gallery" src="/Users/wupeiqi/Documents/work/%E8%B7%AF%E9%A3%9E%E5%AD%A6%E5%9F%8E-%E5%BD%95%E8%AF%BE/assets/image-20190803103734677.png" alt="image-20190803103734677" data-caption="image-20190803103734677" loading="lazy"></p>
 <h4 id="2-6-1-第一天上班前在家上传代码"><a href="#2-6-1-第一天上班前在家上传代码" class="headerlink" title="2.6.1 第一天上班前在家上传代码"></a>2.6.1 第一天上班前在家上传代码</h4><p>首先，需要注册github账号，并创建远程仓库，然后再执行如下命令，将代码上传到github。</p>
 <p><img data-fancybox="gallery" src="/Users/wupeiqi/Documents/work/%E8%B7%AF%E9%A3%9E%E5%AD%A6%E5%9F%8E-%E5%BD%95%E8%AF%BE/assets/image-20190803104011845.png" alt="image-20190803104011845" data-caption="image-20190803104011845" loading="lazy"></p>
-<figure class="highlight maxima"><table><tr><td class="code"><pre><code class="hljs maxima"><span class="hljs-number">1</span>. 给远程仓库起别名<br>	git remote add <span class="hljs-built_in">origin</span> 远程仓库地址<br><span class="hljs-number">2</span>. 向远程推送代码<br>	git <span class="hljs-built_in">push</span> -u <span class="hljs-built_in">origin</span> 分支<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 给远程仓库起别名</span><br><span class="line">	git remote add origin 远程仓库地址</span><br><span class="line">2. 向远程推送代码</span><br><span class="line">	git push -u origin 分支</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-6-2-初次在公司新电脑下载代码"><a href="#2-6-2-初次在公司新电脑下载代码" class="headerlink" title="2.6.2 初次在公司新电脑下载代码"></a>2.6.2 初次在公司新电脑下载代码</h4><figure class="highlight crmsh"><table><tr><td class="code"><pre><code class="hljs crmsh"><span class="hljs-number">1</span>. 克隆远程仓库代码<br>	git <span class="hljs-keyword">clone</span> <span class="hljs-title">远程仓库地址 (内部已实现git</span> remote add origin 远程仓库地址)<br><span class="hljs-number">2</span>. 切换分支<br>	git checkout 分支<br></code></pre></td></tr></table></figure>
+<h4 id="2-6-2-初次在公司新电脑下载代码"><a href="#2-6-2-初次在公司新电脑下载代码" class="headerlink" title="2.6.2 初次在公司新电脑下载代码"></a>2.6.2 初次在公司新电脑下载代码</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 克隆远程仓库代码</span><br><span class="line">	git clone 远程仓库地址 (内部已实现git remote add origin 远程仓库地址)</span><br><span class="line">2. 切换分支</span><br><span class="line">	git checkout 分支</span><br></pre></td></tr></table></figure>
 
 <p>在公司下载完代码后，继续开发</p>
-<figure class="highlight crmsh"><table><tr><td class="code"><pre><code class="hljs crmsh"><span class="hljs-number">1</span>. 切换到dev分支进行开发<br>	git checkout dev <br><span class="hljs-number">2</span>. 把<span class="hljs-literal">master</span>分支合并到dev [仅一次]<br>	git merge <span class="hljs-keyword">master</span><br><span class="hljs-title">3</span>. 修改代码<br><span class="hljs-number">4</span>. 提交代码<br>	git add . <br>	git commit -m &#x27;xx&#x27;<br>	git push origin dev <br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. 切换到dev分支进行开发</span><br><span class="line">	git checkout dev </span><br><span class="line">2. 把master分支合并到dev [仅一次]</span><br><span class="line">	git merge master</span><br><span class="line">3. 修改代码</span><br><span class="line">4. 提交代码</span><br><span class="line">	git add . </span><br><span class="line">	git commit -m &#x27;xx&#x27;</span><br><span class="line">	git push origin dev </span><br></pre></td></tr></table></figure>
 
-<h4 id="2-6-3-下班回到家继续写代码"><a href="#2-6-3-下班回到家继续写代码" class="headerlink" title="2.6.3 下班回到家继续写代码"></a>2.6.3 下班回到家继续写代码</h4><figure class="highlight q"><table><tr><td class="code"><pre><code class="hljs q"><span class="hljs-number">1.</span> 切换到<span class="hljs-built_in">dev</span>分支进行开发<br>	git checkout <span class="hljs-built_in">dev</span> <br><span class="hljs-number">2.</span> 拉代码<br>	git pull origin <span class="hljs-built_in">dev</span> <br><span class="hljs-number">3.</span> 继续开发<br><br><span class="hljs-number">4.</span> 提交代码<br>	git add . <br>	git commit -m &#x27;xx&#x27;<br>	git push origin <span class="hljs-built_in">dev</span> <br></code></pre></td></tr></table></figure>
+<h4 id="2-6-3-下班回到家继续写代码"><a href="#2-6-3-下班回到家继续写代码" class="headerlink" title="2.6.3 下班回到家继续写代码"></a>2.6.3 下班回到家继续写代码</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1. 切换到dev分支进行开发</span><br><span class="line">	git checkout dev </span><br><span class="line">2. 拉代码</span><br><span class="line">	git pull origin dev </span><br><span class="line">3. 继续开发</span><br><span class="line"></span><br><span class="line">4. 提交代码</span><br><span class="line">	git add . </span><br><span class="line">	git commit -m &#x27;xx&#x27;</span><br><span class="line">	git push origin dev </span><br></pre></td></tr></table></figure>
 
-<h4 id="2-6-4-到公司继续开发"><a href="#2-6-4-到公司继续开发" class="headerlink" title="2.6.4 到公司继续开发"></a>2.6.4 到公司继续开发</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> 切换到dev分支进行开发<br><span class="hljs-code">	git checkout dev </span><br><span class="hljs-code">2. 拉最新代码(不必再clone，只需要通过pull获取最新代码即可)</span><br><span class="hljs-code">	git pull origin dev </span><br><span class="hljs-code">3. 继续开发</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">4.</span> 提交代码<br><span class="hljs-code">	git add . </span><br><span class="hljs-code">	git commit -m &#x27;xx&#x27;</span><br><span class="hljs-code">	git push origin dev </span><br><span class="hljs-code"></span><br></code></pre></td></tr></table></figure>
+<h4 id="2-6-4-到公司继续开发"><a href="#2-6-4-到公司继续开发" class="headerlink" title="2.6.4 到公司继续开发"></a>2.6.4 到公司继续开发</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1. 切换到dev分支进行开发</span><br><span class="line">	git checkout dev </span><br><span class="line">2. 拉最新代码(不必再clone，只需要通过pull获取最新代码即可)</span><br><span class="line">	git pull origin dev </span><br><span class="line">3. 继续开发</span><br><span class="line"></span><br><span class="line">4. 提交代码</span><br><span class="line">	git add . </span><br><span class="line">	git commit -m &#x27;xx&#x27;</span><br><span class="line">	git push origin dev </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>开发完毕，要上线</p>
-<figure class="highlight crmsh"><table><tr><td class="code"><pre><code class="hljs crmsh"><span class="hljs-number">1</span>. 将dev分支合并到<span class="hljs-literal">master</span>，进行上线<br>	git checkout <span class="hljs-keyword">master</span><br>	<span class="hljs-title">git</span> merge dev <br>	git push origin <span class="hljs-keyword">master</span><br><span class="hljs-title">2</span>. 把dev分支也推送到远程<br>	git checkout dev<br>	git merge <span class="hljs-keyword">master</span> <br>	<span class="hljs-title">git</span> push origin dev <br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 将dev分支合并到master，进行上线</span><br><span class="line">	git checkout master</span><br><span class="line">	git merge dev </span><br><span class="line">	git push origin master</span><br><span class="line">2. 把dev分支也推送到远程</span><br><span class="line">	git checkout dev</span><br><span class="line">	git merge master </span><br><span class="line">	git push origin dev </span><br></pre></td></tr></table></figure>
 
-<h4 id="2-6-5-在公司约妹子忘记提交代码"><a href="#2-6-5-在公司约妹子忘记提交代码" class="headerlink" title="2.6.5 在公司约妹子忘记提交代码"></a>2.6.5 在公司约妹子忘记提交代码</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> 拉代码<br><span class="hljs-code">	git pull origin dev </span><br><span class="hljs-code">2. 继续开发</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">3.</span> 提交代码<br><span class="hljs-code">	git add . </span><br><span class="hljs-code">	git commit -m &#x27;xx&#x27;</span><br><span class="hljs-code"></span><br>注：忘记push了<br></code></pre></td></tr></table></figure>
+<h4 id="2-6-5-在公司约妹子忘记提交代码"><a href="#2-6-5-在公司约妹子忘记提交代码" class="headerlink" title="2.6.5 在公司约妹子忘记提交代码"></a>2.6.5 在公司约妹子忘记提交代码</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. 拉代码</span><br><span class="line">	git pull origin dev </span><br><span class="line">2. 继续开发</span><br><span class="line"></span><br><span class="line">3. 提交代码</span><br><span class="line">	git add . </span><br><span class="line">	git commit -m &#x27;xx&#x27;</span><br><span class="line"></span><br><span class="line">注：忘记push了</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-6-6-回家继续写代码"><a href="#2-6-6-回家继续写代码" class="headerlink" title="2.6.6 回家继续写代码"></a>2.6.6 回家继续写代码</h4><figure class="highlight maxima"><table><tr><td class="code"><pre><code class="hljs maxima"><span class="hljs-number">1</span>. 拉代码，发现在公司写的代码忘记提交...<br>	git pull <span class="hljs-built_in">origin</span> dev <br>	<br><span class="hljs-number">2</span>. 继续开发其他功能<br>	<br><span class="hljs-number">3</span>. 把dev分支也推送到远程<br>	git add . <br>	git commit -m &#x27;xx&#x27;<br>	git <span class="hljs-built_in">push</span> <span class="hljs-built_in">origin</span> dev <br></code></pre></td></tr></table></figure>
+<h4 id="2-6-6-回家继续写代码"><a href="#2-6-6-回家继续写代码" class="headerlink" title="2.6.6 回家继续写代码"></a>2.6.6 回家继续写代码</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. 拉代码，发现在公司写的代码忘记提交...</span><br><span class="line">	git pull origin dev </span><br><span class="line">	</span><br><span class="line">2. 继续开发其他功能</span><br><span class="line">	</span><br><span class="line">3. 把dev分支也推送到远程</span><br><span class="line">	git add . </span><br><span class="line">	git commit -m &#x27;xx&#x27;</span><br><span class="line">	git push origin dev </span><br></pre></td></tr></table></figure>
 
-<h4 id="2-6-7-到公司继续写代码"><a href="#2-6-7-到公司继续写代码" class="headerlink" title="2.6.7 到公司继续写代码"></a>2.6.7 到公司继续写代码</h4><figure class="highlight maxima"><table><tr><td class="code"><pre><code class="hljs maxima"><span class="hljs-number">1</span>. 拉代码，把晚上在家写的代码拉到本地(有合并、可能产生冲突)<br>	git pull <span class="hljs-built_in">origin</span> dev <br>	<br><span class="hljs-number">2</span>. 如果有冲突，手动解决冲突<br>	<br><span class="hljs-number">3</span>. 继续开发其他功能<br>	<br><span class="hljs-number">4</span>. 把dev分支也推送到远程<br>	git add . <br>	git commit -m &#x27;xx&#x27;<br>	git <span class="hljs-built_in">push</span> <span class="hljs-built_in">origin</span> dev <br></code></pre></td></tr></table></figure>
+<h4 id="2-6-7-到公司继续写代码"><a href="#2-6-7-到公司继续写代码" class="headerlink" title="2.6.7 到公司继续写代码"></a>2.6.7 到公司继续写代码</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1. 拉代码，把晚上在家写的代码拉到本地(有合并、可能产生冲突)</span><br><span class="line">	git pull origin dev </span><br><span class="line">	</span><br><span class="line">2. 如果有冲突，手动解决冲突</span><br><span class="line">	</span><br><span class="line">3. 继续开发其他功能</span><br><span class="line">	</span><br><span class="line">4. 把dev分支也推送到远程</span><br><span class="line">	git add . </span><br><span class="line">	git commit -m &#x27;xx&#x27;</span><br><span class="line">	git push origin dev </span><br></pre></td></tr></table></figure>
 
-<h4 id="2-6-8-其他"><a href="#2-6-8-其他" class="headerlink" title="2.6.8 其他"></a>2.6.8 其他</h4><figure class="highlight maxima"><table><tr><td class="code"><pre><code class="hljs maxima">git pull <span class="hljs-built_in">origin</span> dev<br>等价于<br>git fetch <span class="hljs-built_in">origin</span> dev<br>git merge <span class="hljs-built_in">origin</span>/dev <br></code></pre></td></tr></table></figure>
+<h4 id="2-6-8-其他"><a href="#2-6-8-其他" class="headerlink" title="2.6.8 其他"></a>2.6.8 其他</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git pull origin dev</span><br><span class="line">等价于</span><br><span class="line">git fetch origin dev</span><br><span class="line">git merge origin/dev </span><br></pre></td></tr></table></figure>
 
 <p><img data-fancybox="gallery" src="/Users/wupeiqi/Documents/work/%E8%B7%AF%E9%A3%9E%E5%AD%A6%E5%9F%8E-%E5%BD%95%E8%AF%BE/assets/image-20190803104819552.png" alt="image-20190803104819552" data-caption="image-20190803104819552" loading="lazy"></p>
 <h4 id="2-6-9-rebase的作用？"><a href="#2-6-9-rebase的作用？" class="headerlink" title="2.6.9 rebase的作用？"></a>2.6.9 rebase的作用？</h4><p>rebase可以保持提交记录简洁，不分叉。</p>
@@ -343,29 +343,29 @@
 <li><p>安装beyond compare </p>
 </li>
 <li><p>在git中配置</p>
-<figure class="highlight verilog"><table><tr><td class="code"><pre><code class="hljs verilog">git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">local</span> merge<span class="hljs-variable">.tool</span> bc3<br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">local</span> mergetool<span class="hljs-variable">.path</span> &#x27;/usr/<span class="hljs-keyword">local</span>/bin/bcomp&#x27;<br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">local</span> mergetool<span class="hljs-variable">.keepBackup</span> false<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --local merge.tool bc3</span><br><span class="line">git config --local mergetool.path &#x27;/usr/local/bin/bcomp&#x27;</span><br><span class="line">git config --local mergetool.keepBackup false</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>应用beyond compare 解决冲突</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git mergetool</span> <br></code></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git mergetool </span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="2-7-小总结"><a href="#2-7-小总结" class="headerlink" title="2.7 小总结"></a>2.7 小总结</h3><ul>
 <li><p>添加远程连接（别名）</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><code class="hljs mipsasm">git remote <span class="hljs-keyword">add </span><span class="hljs-keyword">origin </span>地址<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin 地址</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>推送代码</p>
-<figure class="highlight maxima"><table><tr><td class="code"><pre><code class="hljs maxima">git <span class="hljs-built_in">push</span> <span class="hljs-built_in">origin</span> dev <br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin dev </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>下载代码</p>
-<figure class="highlight crmsh"><table><tr><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">地址</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 地址</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>拉取代码</p>
-<figure class="highlight maxima"><table><tr><td class="code"><pre><code class="hljs maxima">git pull <span class="hljs-built_in">origin</span> dev <br>等价于<br>git fetch <span class="hljs-built_in">origin</span> dev<br>git merge <span class="hljs-built_in">origin</span>/dev <br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git pull origin dev </span><br><span class="line">等价于</span><br><span class="line">git fetch origin dev</span><br><span class="line">git merge origin/dev </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>保持代码提交整洁（变基）</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> rebase 分支<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase 分支</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>记录图形展示</p>
-<figure class="highlight perl"><table><tr><td class="code"><pre><code class="hljs perl">git <span class="hljs-keyword">log</span> --graph --pretty=<span class="hljs-keyword">format</span>:<span class="hljs-string">&quot;%h %s&quot;</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --graph --pretty=format:&quot;%h %s&quot;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="2-8-第六阶段：多人协同开发工作流"><a href="#2-8-第六阶段：多人协同开发工作流" class="headerlink" title="2.8 第六阶段：多人协同开发工作流"></a>2.8 第六阶段：多人协同开发工作流</h3><p><img data-fancybox="gallery" src="/Users/wupeiqi/Documents/work/%E8%B7%AF%E9%A3%9E%E5%AD%A6%E5%9F%8E-%E5%BD%95%E8%AF%BE/assets/image-20190806091417927.png" alt="image-20190806091417927" data-caption="image-20190806091417927" loading="lazy"></p>
 <h4 id="2-8-1-创建项目-amp-邀请成员"><a href="#2-8-1-创建项目-amp-邀请成员" class="headerlink" title="2.8.1 创建项目&amp;邀请成员"></a>2.8.1 创建项目&amp;邀请成员</h4><p>协同开发时，需要所有成员都可以对同一个项目进行操作，需要邀请成员并赋予权限，否则无法开发。github支持两种创建项目的方式（供多人协同开发）。</p>
@@ -379,7 +379,7 @@
 <div style="width:50%;float:left"><img src="/Users/wupeiqi/Documents/work/路飞学城-录课/assets/image-20190806100240453.png"/></div></li>
 </ol>
 <h5 id="扩展：Tag标签管理"><a href="#扩展：Tag标签管理" class="headerlink" title="扩展：Tag标签管理"></a>扩展：Tag标签管理</h5><p>为了能清晰的管理版本，在公司不会直接使用commit来做版本，会基于Tag来实现：v1.0 、 v1.2 、v2.0 版本。</p>
-<figure class="highlight crmsh"><table><tr><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">tag</span> <span class="hljs-title">-a</span> v1.<span class="hljs-number">0</span> -m &#x27;版本介绍&#x27;        创建本地创建<span class="hljs-keyword">Tag</span>信息<br>git <span class="hljs-keyword">tag</span> <span class="hljs-title">-d</span> v1.<span class="hljs-number">0</span>                     删除<span class="hljs-keyword">Tag</span><br><span class="hljs-title">git</span> push origin  --tags             将本地<span class="hljs-keyword">tag</span>信息推送到远程仓库<br>git pull origin  --tags             更新本地<span class="hljs-keyword">tag</span>版本信息<br><br>git checkout v.<span class="hljs-number">10</span>                   切换<span class="hljs-keyword">tag</span><br><span class="hljs-title">git</span> <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> v0.<span class="hljs-number">1</span> 地址               指定<span class="hljs-keyword">tag</span>下载代码<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git tag -a v1.0 -m &#x27;版本介绍&#x27;        创建本地创建Tag信息</span><br><span class="line">git tag -d v1.0                     删除Tag</span><br><span class="line">git push origin  --tags             将本地tag信息推送到远程仓库</span><br><span class="line">git pull origin  --tags             更新本地tag版本信息</span><br><span class="line"></span><br><span class="line">git checkout v.10                   切换tag</span><br><span class="line">git clone -b v0.1 地址               指定tag下载代码</span><br></pre></td></tr></table></figure>
 
 
 
@@ -392,7 +392,7 @@
 <p><img data-fancybox="gallery" src="/Users/wupeiqi/Documents/work/%E8%B7%AF%E9%A3%9E%E5%AD%A6%E5%9F%8E-%E5%BD%95%E8%AF%BE/assets/image-20190806121845153.png" alt="image-20190806121845153" data-caption="image-20190806121845153" loading="lazy"></p>
 </li>
 <li><p>小弟在自己电脑上下载代码并开发</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/oldboy-org/</span>dbhot.git<br>cd dbhot<br>git checkout dev<br>git checkout -b dzz <br>写代码...<br><br>git add .<br>git commit -m <span class="hljs-string">&#x27;斗地主功能开发完成&#x27;</span><br>git push origin ddz<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/oldboy-org/dbhot.git</span><br><span class="line">cd dbhot</span><br><span class="line">git checkout dev</span><br><span class="line">git checkout -b dzz </span><br><span class="line">写代码...</span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line">git commit -m &#x27;斗地主功能开发完成&#x27;</span><br><span class="line">git push origin ddz</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="2-8-3-code-review"><a href="#2-8-3-code-review" class="headerlink" title="2.8.3 code review"></a>2.8.3 code review</h4><ol>
 <li>配置，代码review之后才能合并到dev分支。<br><img data-fancybox="gallery" src="/Users/wupeiqi/Documents/work/%E8%B7%AF%E9%A3%9E%E5%AD%A6%E5%9F%8E-%E5%BD%95%E8%AF%BE/assets/image-20190806122224316.png" alt="image-20190806122224316" data-caption="image-20190806122224316" loading="lazy"><br><img data-fancybox="gallery" src="/Users/wupeiqi/Documents/work/%E8%B7%AF%E9%A3%9E%E5%AD%A6%E5%9F%8E-%E5%BD%95%E8%AF%BE/assets/image-20190806122307569.png" alt="image-20190806122307569" data-caption="image-20190806122307569" loading="lazy"></li>
@@ -402,18 +402,18 @@
 <h4 id="2-8-4-提测上线（预发布）"><a href="#2-8-4-提测上线（预发布）" class="headerlink" title="2.8.4 提测上线（预发布）"></a>2.8.4 提测上线（预发布）</h4><p>由专门团队或团队leader执行以下步骤：</p>
 <ol>
 <li><p>基于dev分值创建release分值</p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino">git checkout dev<br>git checkout -b release<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev</span><br><span class="line">git checkout -b release</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>测试等</p>
 </li>
 <li><p>合并到master</p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino">使用pull request<br>或<br>本地将release合并到master分支<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">使用pull request</span><br><span class="line">或</span><br><span class="line">本地将release合并到master分支</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在master分支打tag</p>
-<figure class="highlight crmsh"><table><tr><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">tag</span> <span class="hljs-title">-a</span> v2 -m &#x27;第二版 斗地主功能&#x27;<br>git push origin --tags<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git tag -a v2 -m &#x27;第二版 斗地主功能&#x27;</span><br><span class="line">git push origin --tags</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>运维人员就可以去下载代码做上线了</p>
-<figure class="highlight crmsh"><table><tr><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> v2 地址<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b v2 地址</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="2-9-第七阶段：给开源软件贡献代码"><a href="#2-9-第七阶段：给开源软件贡献代码" class="headerlink" title="2.9 第七阶段：给开源软件贡献代码"></a>2.9 第七阶段：给开源软件贡献代码</h3><ol>
 <li>fork源代码<br>将别人源代码拷贝到我自己的远程仓库。</li>
@@ -422,29 +422,29 @@
 </ol>
 <h2 id="第三章-其他"><a href="#第三章-其他" class="headerlink" title="第三章 其他"></a>第三章 其他</h2><h3 id="3-1-配置"><a href="#3-1-配置" class="headerlink" title="3.1 配置"></a>3.1 配置</h3><ul>
 <li><p>项目配置文件：项目&#x2F;.git&#x2F;config</p>
-<figure class="highlight delphi"><table><tr><td class="code"><pre><code class="hljs delphi">git config --<span class="hljs-keyword">local</span> user.<span class="hljs-keyword">name</span> <span class="hljs-string">&#x27;武沛齐&#x27;</span><br>git config --<span class="hljs-keyword">local</span> user.email <span class="hljs-string">&#x27;wupeiqi@xx.com&#x27;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --local user.name &#x27;武沛齐&#x27;</span><br><span class="line">git config --local user.email &#x27;wupeiqi@xx.com&#x27;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>全局配置文件:  ~&#x2F;.gitconfig</p>
-<figure class="highlight autoit"><table><tr><td class="code"><pre><code class="hljs autoit">git config --<span class="hljs-keyword">global</span> user.name <span class="hljs-string">&#x27;wupeiq&#x27;</span><br>git config --<span class="hljs-keyword">global</span> user.name <span class="hljs-string">&#x27;wupeiqi@xx.com&#x27;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &#x27;wupeiq&#x27;</span><br><span class="line">git config --global user.name &#x27;wupeiqi@xx.com&#x27;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>系统配置文件：&#x2F;etc&#x2F;.gitconfig</p>
-<figure class="highlight xquery"><table><tr><td class="code"><pre><code class="hljs xquery">git config --system user<span class="hljs-built_in">.name</span> <span class="hljs-string">&#x27;wupeiq&#x27;</span><br>git config --system user<span class="hljs-built_in">.name</span> <span class="hljs-string">&#x27;wupeiqi@xx.com&#x27;</span><br><br>注意：需要<span class="hljs-built_in">有root</span>权限<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --system user.name &#x27;wupeiq&#x27;</span><br><span class="line">git config --system user.name &#x27;wupeiqi@xx.com&#x27;</span><br><span class="line"></span><br><span class="line">注意：需要有root权限</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>应用场景：</p>
-<figure class="highlight verilog"><table><tr><td class="code"><pre><code class="hljs verilog">git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">local</span> user<span class="hljs-variable">.name</span> &#x27;武沛齐&#x27;<br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">local</span> user<span class="hljs-variable">.email</span> &#x27;wupeiqi@xx<span class="hljs-variable">.com</span>&#x27;<br><br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">local</span> merge<span class="hljs-variable">.tool</span> bc3<br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">local</span> mergetool<span class="hljs-variable">.path</span> &#x27;/usr/<span class="hljs-keyword">local</span>/bin/bcomp&#x27;<br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">local</span> mergetool<span class="hljs-variable">.keepBackup</span> false<br><br>git remote add origin 地址 ，默认添加在本地配置文件中(--<span class="hljs-keyword">local</span>)<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git config --local user.name &#x27;武沛齐&#x27;</span><br><span class="line">git config --local user.email &#x27;wupeiqi@xx.com&#x27;</span><br><span class="line"></span><br><span class="line">git config --local merge.tool bc3</span><br><span class="line">git config --local mergetool.path &#x27;/usr/local/bin/bcomp&#x27;</span><br><span class="line">git config --local mergetool.keepBackup false</span><br><span class="line"></span><br><span class="line">git remote add origin 地址 ，默认添加在本地配置文件中(--local)</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-2-免密码登录"><a href="#3-2-免密码登录" class="headerlink" title="3.2 免密码登录"></a>3.2 免密码登录</h3><ul>
 <li><p>URL中体现</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">原来的地址：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/WuPeiqi/</span>dbhot.git<br>修改的地址：https:<span class="hljs-regexp">//</span>用户名:密码@github.com<span class="hljs-regexp">/WuPeiqi/</span>dbhot.git<br><br>git remote add origin https:<span class="hljs-regexp">//</span>用户名:密码@github.com<span class="hljs-regexp">/WuPeiqi/</span>dbhot.git<br>git push origin master <br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">原来的地址：https://github.com/WuPeiqi/dbhot.git</span><br><span class="line">修改的地址：https://用户名:密码@github.com/WuPeiqi/dbhot.git</span><br><span class="line"></span><br><span class="line">git remote add origin https://用户名:密码@github.com/WuPeiqi/dbhot.git</span><br><span class="line">git push origin master </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>SSH实现</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><code class="hljs less"><span class="hljs-selector-tag">1</span>. 生成公钥和私钥(默认放在 ~/.ssh目录下，id_rsa.pub公钥、id_rsa私钥）<br>   ssh-keygen<br><span class="hljs-number">2</span>. 拷贝公钥的内容，并设置到github中。<br><span class="hljs-number">3</span>. 在git本地中配置ssh地址<br>	git remote add origin git<span class="hljs-variable">@github</span>.<span class="hljs-attribute">com</span>:WuPeiqi/dbhot.git<br>	<br><span class="hljs-number">4</span>. 以后使用<br>	git push origin master <br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 生成公钥和私钥(默认放在 ~/.ssh目录下，id_rsa.pub公钥、id_rsa私钥）</span><br><span class="line">   ssh-keygen</span><br><span class="line">2. 拷贝公钥的内容，并设置到github中。</span><br><span class="line">3. 在git本地中配置ssh地址</span><br><span class="line">	git remote add origin git@github.com:WuPeiqi/dbhot.git</span><br><span class="line">	</span><br><span class="line">4. 以后使用</span><br><span class="line">	git push origin master </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>git自动管理凭证</p>
 </li>
 </ul>
 <h3 id="3-3-git忽略文件"><a href="#3-3-git忽略文件" class="headerlink" title="3.3 git忽略文件"></a>3.3 git忽略文件</h3><p>让Git不再管理当前目录下的某些文件。</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><code class="hljs stylus">*<span class="hljs-selector-class">.h</span><br>!<span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.h</span><br>files/<br>*<span class="hljs-selector-class">.py</span><span class="hljs-selector-attr">[c|a|d]</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*.h</span><br><span class="line">!a.h</span><br><span class="line">files/</span><br><span class="line">*.py[c|a|d]</span><br></pre></td></tr></table></figure>
 
 <p>更多参考：<a target="_blank" rel="noopener" href="https://github.com/github/gitignore">https://github.com/github/gitignore</a></p>
 <h3 id="3-4-github任务管理相关"><a href="#3-4-github任务管理相关" class="headerlink" title="3.4 github任务管理相关"></a>3.4 github任务管理相关</h3><ul>
@@ -546,7 +546,7 @@
 
  
 
-<script async src="/js/app.js?v=1669301333204"></script>
+<script async src="/js/app.js?v=1669362113285"></script>
 
 
 
