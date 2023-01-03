@@ -4,7 +4,7 @@
 
 <head>
     
-    <title>Page - Wendy</title>
+    <title>vue项目解决跨域问题 - Wendy</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,16 +12,17 @@
     
 
     <link rel="shortcut icon" href="/assets/tx0001.png" type="image/png" />
-    <meta name="description" content="This is a page test.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Page">
-<meta property="og:url" content="https://wendy-ljw.github.io/page/index.html">
+    <meta name="description" content="解决跨域问题 问题描述：前后端分离开发时，同时启动项目是两个不同的域名，因此需要跨域传输数据。  在vue.config.js中进行设置，如 12345678910111213141516module.exports &#x3D; defineConfig(&amp;#123;  transpileDependencies: true,  lintOnSave:false, &#x2F;&#x2F; 关闭eslilnt校验  devS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue项目解决跨域问题">
+<meta property="og:url" content="https://wendy-ljw.github.io/2023/01/03/vue-prob-1/index.html">
 <meta property="og:site_name" content="Wendy">
-<meta property="og:description" content="This is a page test.">
+<meta property="og:description" content="解决跨域问题 问题描述：前后端分离开发时，同时启动项目是两个不同的域名，因此需要跨域传输数据。  在vue.config.js中进行设置，如 12345678910111213141516module.exports &#x3D; defineConfig(&amp;#123;  transpileDependencies: true,  lintOnSave:false, &#x2F;&#x2F; 关闭eslilnt校验  devS">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2013-12-26T14:52:56.000Z">
-<meta property="article:modified_time" content="2022-11-10T11:04:24.717Z">
+<meta property="article:published_time" content="2023-01-03T08:10:24.000Z">
+<meta property="article:modified_time" content="2023-01-03T12:41:45.940Z">
 <meta property="article:author" content="Wendy">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
     <link
         rel="stylesheet"
@@ -34,9 +35,9 @@
     
         <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3763712_by4sjqrtp9w.css">
     
-    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1672749719468">
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1672749719468">
-    <link rel="stylesheet" href="/css/style.css?v=1672749719468">
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1672749719463">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1672749719463">
+    <link rel="stylesheet" href="/css/style.css?v=1672749719463">
      
     
         <link rel="stylesheet" href="/custom.css">
@@ -191,16 +192,24 @@
   <article>
       
           <div class="nexmoe-post-cover" style="padding-bottom: 56.25%;"> 
-              <img data-fancybox="gallery" src="/assets/bjt/b0001.jpg" alt="Page" loading="lazy">
-              <h1>Page</h1>
+              <img data-fancybox="gallery" src="/assets/bjt/b0001.jpg" alt="vue项目解决跨域问题" loading="lazy">
+              <h1>vue项目解决跨域问题</h1>
           </div>
       
       
       <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2013年12月26日</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年01月03日</a>
 </div>
 
-      <p>This is a page test.</p>
+      <h2 id="解决跨域问题"><a href="#解决跨域问题" class="headerlink" title="解决跨域问题"></a>解决跨域问题</h2><blockquote>
+<p>问题描述：前后端分离开发时，同时启动项目是两个不同的域名，因此需要跨域传输数据。</p>
+</blockquote>
+<p>在vue.config.js中进行设置，如</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = defineConfig(&#123;</span><br><span class="line">  <span class="attr">transpileDependencies</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">lintOnSave</span>:<span class="literal">false</span>, <span class="comment">// 关闭eslilnt校验</span></span><br><span class="line">  <span class="attr">devServer</span>:&#123;</span><br><span class="line">    <span class="attr">proxy</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;/api&#x27;</span>:&#123;</span><br><span class="line">        <span class="attr">target</span>: <span class="string">&#x27;http://localhost:8081/change&#x27;</span>,</span><br><span class="line">        <span class="attr">changeOrigin</span>:<span class="literal">true</span>,</span><br><span class="line">        <span class="attr">pathRewrite</span>:&#123;</span><br><span class="line">          <span class="string">&#x27;^/api&#x27;</span>:<span class="string">&#x27;&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：修改完之后一定要重启项目！</p>
+</blockquote>
 
   </article>
 
@@ -208,7 +217,7 @@
       
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>Wendy<br>
-        <strong>本文链接：</strong><a href="https://wendy-ljw.github.io/page/index.html" title="https:&#x2F;&#x2F;wendy-ljw.github.io&#x2F;page&#x2F;index.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;wendy-ljw.github.io&#x2F;page&#x2F;index.html</a><br>
+        <strong>本文链接：</strong><a href="https://wendy-ljw.github.io/2023/01/03/vue-prob-1/" title="https:&#x2F;&#x2F;wendy-ljw.github.io&#x2F;2023&#x2F;01&#x2F;03&#x2F;vue-prob-1&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;wendy-ljw.github.io&#x2F;2023&#x2F;01&#x2F;03&#x2F;vue-prob-1&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
@@ -219,6 +228,10 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow">
     
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%9D%82%E7%96%91/">杂疑</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/vue/" rel="tag">vue</a>
     
 </div>
 
@@ -251,6 +264,13 @@
                         
                           
                           
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">解决跨域问题</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
                           
                       
                     
@@ -279,7 +299,7 @@
 
  
 
-<script async src="/js/app.js?v=1672749719469"></script>
+<script async src="/js/app.js?v=1672749719468"></script>
 
 
 
