@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>sum-1 - Wendy</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="/assets/tx0001.png" type="image/png" />
+    <meta name="description" content="面试总结HTMLCSSCSS盒模型以及有哪几种标准盒模型（content-box）： height&#x3D;content  (浏览器默认) IE盒模型（border-box）：height&#x3D;content+padding+border 盒模型的种类通过box-sizing设置，如 box-sizing:border:box flex:1flex: 1是CSS中用于布局的一个属性，它的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sum-1">
+<meta property="og:url" content="https://wendy-ljw.github.io/2023/03/17/sum-1/index.html">
+<meta property="og:site_name" content="Wendy">
+<meta property="og:description" content="面试总结HTMLCSSCSS盒模型以及有哪几种标准盒模型（content-box）： height&#x3D;content  (浏览器默认) IE盒模型（border-box）：height&#x3D;content+padding+border 盒模型的种类通过box-sizing设置，如 box-sizing:border:box flex:1flex: 1是CSS中用于布局的一个属性，它的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-17T11:31:36.000Z">
+<meta property="article:modified_time" content="2023-04-05T14:49:33.450Z">
+<meta property="article:author" content="Wendy">
+<meta name="twitter:card" content="summary">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"
+    />
+    
+        <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3763712_by4sjqrtp9w.css">
+    
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1680706306553">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1680706306553">
+    <link rel="stylesheet" href="/css/style.css?v=1680706306553">
+     
+    
+        <link rel="stylesheet" href="/custom.css">
+    
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(/assets/bjt/b0001.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="Wendy" class="mdui-btn mdui-btn-icon"><img src="/assets/tx0001.png" alt="Wendy"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="Wendy">
+            <img src="/assets/tx0001.png" alt="Wendy" alt="Wendy">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>17</div>
+        <div><span>标签</span>13</div>
+        <div><span>分类</span>5</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://onlineweb.zhihuishu.com/onlinestuh5" target="_blank" mdui-tooltip="{content: '智慧树'}" style="color: rgb(60,179,113);background-color: rgba(60,179,113,.15);">
+            <i class="nexmoefont icon-tree"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/107170390" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/Wendy-ljw/wendy-ljw.github.io" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://www.cqut.edu.cn/" target="_blank" mdui-tooltip="{content: 'CQUT'}" style="color: rgb(68,206,246);background-color: rgba(68,206,246,.15);">
+            <i class="nexmoefont icon-home"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/总结/">总结</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/杂疑/">杂疑</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/种类/">种类</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/笔记/">笔记</a>
+          <span class="category-list-count">9</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/面试/">面试</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/css/" style="font-size: 12.5px;">css</a> <a href="/tags/element-ui/" style="font-size: 10px;">element-ui</a> <a href="/tags/es6/" style="font-size: 17.5px;">es6</a> <a href="/tags/git/" style="font-size: 12.5px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 12.5px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/vue/" style="font-size: 15px;">vue</a> <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">标签</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2023 Wendy
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <br><script data-ad-client="ca-pub-2058306854838448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: 41.66666666666667%;"> 
+              <img data-fancybox="gallery" src="/assets/bjt/b0001.jpg" alt="sum-1" loading="lazy">
+              <h1>sum-1</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年03月17日</a>
+</div>
+
+      <h2 id="面试总结"><a href="#面试总结" class="headerlink" title="面试总结"></a>面试总结</h2><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><h4 id="CSS盒模型以及有哪几种"><a href="#CSS盒模型以及有哪几种" class="headerlink" title="CSS盒模型以及有哪几种"></a>CSS盒模型以及有哪几种</h4><p>标准盒模型（content-box）： height&#x3D;content  (浏览器默认)</p>
+<p>IE盒模型（border-box）：height&#x3D;content+padding+border</p>
+<p>盒模型的种类通过box-sizing设置，如 box-sizing:border:box</p>
+<h4 id="flex-1"><a href="#flex-1" class="headerlink" title="flex:1"></a>flex:1</h4><p>flex: 1是CSS中用于布局的一个属性，它的作用是指定元素在弹性布局中的伸缩比例。当一个容器中有多个子元素时，可以通过flex属性来控制它们在容器中的占比。</p>
+<p>具体来说，flex属性是一个简写属性，包括了flex-grow、flex-shrink和flex-basis三个属性。这三个属性分别代表了弹性容器中的三个伸缩属性：</p>
+<ul>
+<li>flex-grow属性表示元素的放大比例，默认值为0，即不放大。</li>
+<li>flex-shrink属性表示元素的缩小比例，默认值为1，即按比例缩小。</li>
+<li>flex-basis属性表示元素在分配多余空间之前的基准大小，默认值为auto，即根据元素的实际大小来分配空间。</li>
+</ul>
+<p>当使用flex:1时，实际上是将flex-grow属性设置为1，其它属性保持默认值。这样，所有具有flex:1样式的子元素都将按照相同的比例来分配容器中的剩余空间，使它们占据相等的空间。</p>
+<p>需要注意的是，如果弹性容器中有多个子元素，且它们的flex属性不同，那么它们将按照flex属性的大小来分配空间。如果一个元素的flex属性值为2，而另一个元素的flex属性值为1，则前者占用的空间是后者的两倍。</p>
+<p>总之，使用flex:1可以很方便地实现等比例的布局效果，特别是在响应式布局中，可以避免写复杂的媒体查询和计算百分比宽度的麻烦。</p>
+<h4 id="画一条0-5px的线"><a href="#画一条0-5px的线" class="headerlink" title="画一条0.5px的线"></a>画一条0.5px的线</h4><p>transform:scaleY(0.5)+transfom-origin:50% 100%</p>
+<h4 id="内联样式与样式表的区别"><a href="#内联样式与样式表的区别" class="headerlink" title="内联样式与样式表的区别"></a>内联样式与样式表的区别</h4><p>内联样式和样式表都是用于设置网页样式的方法，它们的区别在于：</p>
+<ul>
+<li>内联样式是直接在HTML元素中设置样式，而样式表是在HTML文档中引用的外部样式文件。</li>
+<li>内联样式的优先级比样式表高，即如果同时设置了相同的样式属性，内联样式会覆盖样式表中的设置。</li>
+<li>样式表可以应用于多个HTML元素，而内联样式只能应用于单个元素。</li>
+<li>样式表可以通过媒体查询设置响应式样式，而内联样式不能。</li>
+</ul>
+<p>综上所述，虽然内联样式和样式表都可以用于设置网页样式，但样式表更加灵活、可维护性更好，适用于大规模的网站开发。而内联样式则适用于少量样式的个别元素设置。</p>
+<p>内联样式的优先级更高，是在标签中的属性中添加</p>
+<p>样式表是写在style标签中用的</p>
+<h4 id="如何实现水平垂直居中"><a href="#如何实现水平垂直居中" class="headerlink" title="如何实现水平垂直居中"></a>如何实现水平垂直居中</h4><ol>
+<li>可以用table形式实现（display:table）</li>
+<li>可以用弹性盒子的方式（display:flex）<em>推荐</em><ul>
+<li>justify-content: center;</li>
+<li>align-items: center;</li>
+</ul>
+</li>
+<li>网格布局（display:grid）<ul>
+<li>align-self: center;</li>
+<li>justify-self: center;</li>
+</ul>
+</li>
+</ol>
+<h3 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h3><h4 id="js性能的优化"><a href="#js性能的优化" class="headerlink" title="js性能的优化"></a>js性能的优化</h4><ul>
+<li>减少DOM操作：DOM操作是一项非常消耗性能的操作，因此应该尽可能减少DOM操作次数。可以考虑使用innerHTML代替大量的DOM操作，或者使用文档片段（DocumentFragment）等技术来减少DOM操作次数。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">常见的DOM操作包括：</span><br><span class="line">获取元素：通过getElementById、getElementsByTagName、getElementsByClassName等方法获取页面元素。</span><br><span class="line">修改元素属性：通过setAttribute、removeAttribute、className等方法修改元素属性。</span><br><span class="line">修改元素内容：通过innerHTML、textContent等属性或者innerText、appendChild等方法修改元素内容。</span><br><span class="line">添加元素：通过createElement、createTextNode、appendChild等方法添加新的元素。</span><br><span class="line">删除元素：通过removeChild等方法删除元素。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>避免全局变量：在JavaScript中，全局变量的访问比局部变量的访问要慢得多，因此应该尽可能避免使用全局变量。可以使用闭包或模块模式等技术来封装变量，或者使用ES6中的let和const来声明变量。</p>
+</li>
+<li><p>避免重复计算：在一些复杂的算法中，重复计算可能会导致性能问题。可以将计算结果缓存起来，避免重复计算。例如，可以将某个函数的计算结果缓存到对象中，下次调用时直接从缓存中获取结果。</p>
+</li>
+<li><p>使用事件委托：事件委托是一种优化性能的常见方法。它通过将事件处理程序绑定到父元素上，而不是绑定到每个子元素上，从而减少了事件处理程序的数量。这样可以减少内存占用和提高性能。</p>
+</li>
+<li><p>使用异步加载：异步加载可以提高页面的加载速度，从而提高性能。可以使用异步加载技术来加载JavaScript文件、CSS文件等资源。</p>
+</li>
+<li><p>使用缓存：JavaScript代码可以被缓存到客户端，从而减少服务器负载和提高性能。可以使用HTTP缓存、本地存储等技术来缓存JavaScript代码。</p>
+</li>
+<li><p>代码优化：JavaScript代码的优化可以提高代码的执行效率和性能。例如，可以尽可能使用简单的算法，避免过多的循环嵌套等。</p>
+</li>
+</ul>
+<p>总的来说，JavaScript性能的优化是一个复杂的过程，需要在实际项目中根据具体情况进行调优。以上是一些常见的优化方法，可以作为参考。</p>
+<h4 id="Js跨域的定义"><a href="#Js跨域的定义" class="headerlink" title="Js跨域的定义"></a>Js跨域的定义</h4><p>当一个请求url的<strong>协议、域名、端口</strong>三者之间任意一个与当前页面url不同即为跨域。</p>
+<h4 id="this的作用"><a href="#this的作用" class="headerlink" title="this的作用"></a>this的作用</h4><ol>
+<li>全局代码中的this是指向全局对象，在浏览器中是window</li>
+<li>作为单纯的函数调用，在普通函数中的this，指向了全局函数，即window ，在严格模式下，是undefined</li>
+<li>作为对象的方法调用，this指向当前对象</li>
+<li>作为构造函数内部的this指向新创建的对象</li>
+<li>内部函数<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var name = &quot;clever coder&quot;;  </span><br><span class="line">var person = &#123;  </span><br><span class="line">    name : &quot;foocoder&quot;,  </span><br><span class="line">    hello : function(sth)&#123;  </span><br><span class="line">        var sayhello = function(sth) &#123;  </span><br><span class="line">            console.log(this.name + &quot; says &quot; + sth);  </span><br><span class="line">        &#125;;  </span><br><span class="line">        sayhello(sth);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">person.hello(&quot;hello world&quot;);//clever coder says hello world  </span><br></pre></td></tr></table></figure>
+在内部函数中，this没有按预想的绑定到外层函数对象上，而是绑定到了全局对象。这里普遍被认为是JavaScript语言的设计错误，因为没有人想让内部函数中的this指向全局对象。一般的处理方式是将this作为变量保存下来，一般约定为that或者self：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var name = &quot;clever coder&quot;;  </span><br><span class="line">var person = &#123;  </span><br><span class="line">    name : &quot;foocoder&quot;,  </span><br><span class="line">    hello : function(sth)&#123;  </span><br><span class="line">        var that = this;  </span><br><span class="line">        var sayhello = function(sth) &#123;  </span><br><span class="line">            console.log(that.name + &quot; says &quot; + sth);  </span><br><span class="line">        &#125;;  </span><br><span class="line">        sayhello(sth);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">person.hello(&quot;hello world&quot;);//foocoder says hello world </span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="js实现继承的方式"><a href="#js实现继承的方式" class="headerlink" title="js实现继承的方式"></a>js实现继承的方式</h4><h4 id="事件捕获与事件冒泡"><a href="#事件捕获与事件冒泡" class="headerlink" title="事件捕获与事件冒泡"></a>事件捕获与事件冒泡</h4><h4 id="图片懒加载如何实现？"><a href="#图片懒加载如何实现？" class="headerlink" title="图片懒加载如何实现？"></a>图片懒加载如何实现？</h4><h4 id="js实现代理和事件冒泡的区别"><a href="#js实现代理和事件冒泡的区别" class="headerlink" title="js实现代理和事件冒泡的区别"></a>js实现代理和事件冒泡的区别</h4><ul>
+<li>事件代理：把原本需要绑定在子元素上的事件（onclick、onkeydown 等）委托给它的父元素，让父元素来监听子元素的冒泡事件，并在子元素发生事件冒泡时找到这个子元素。</li>
+<li>事件冒泡： 当一个子元素的事件被触发的时候（如onclick事件），该事件会从事件源（被点击的子元素）开始逐级向上传播，触发父级元素的点击事件。</li>
+</ul>
+<h4 id="防抖节流的区别"><a href="#防抖节流的区别" class="headerlink" title="防抖节流的区别"></a>防抖节流的区别</h4><p><em>防抖(debounce):</em> 所谓防抖，就是指触发事件后在 n 秒内函数只能执行一次，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。</p>
+<p><em>节流(throttle):</em> 所谓节流，就是指连续触发事件但是在 n 秒中只执行一次函数。节流会稀释函数的执行频率。</p>
+<p>防抖：在单位时间内频繁触发事件，只有最后一次生效<br>节流：在单位时间内频繁触发事件，只生效一次（也就是只有第一次生效）</p>
+<p><strong>相同点</strong><br>1.都可以通过使用 setTimeout 来实现<br>2.都可以降低回调执行频率，节省计算资源</p>
+<h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><p> 闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，创建的函数可以访问到当前函数的局部变量。</p>
+<p> <em>闭包的特点</em></p>
+<ol>
+<li>让外部访问函数内部变量变成可能</li>
+<li>变量会常驻在内存中</li>
+<li>可以避免使用全局变量防止全局变量污染</li>
+</ol>
+<p> <em>好处：</em>可以读取其他函数内部的变量，并将其一直保存在内存中。<br> <em>坏处：</em>可能会造成内存泄漏或溢出</p>
+<p> <em>两个常见用途：</em></p>
+<ul>
+<li>闭包的第一个用途是使我们在函数外部能够访问到函数内部的变量。通过使用闭包，可以通过在外部调用闭包函数，从而在外部访问到函数内部的变量，可以使用这种方法来创建私有变量。</li>
+<li>闭包的另一个用途是使已经运行结束的函数上下文中的变量对象继续留在内存中，因为闭包函数保留了这个变量对象的引用，所以这个变量对象不会被回收。</li>
+</ul>
+<h4 id="点击事件代理的几种方式"><a href="#点击事件代理的几种方式" class="headerlink" title="点击事件代理的几种方式"></a>点击事件代理的几种方式</h4><p>var dom &#x3D; document.getElementByClasses(“first”);  </p>
+<p>dom[0].onclick &#x3D; function(){alert(111);};  </p>
+<p>dom[0].onclick &#x3D; function(){alert(222);}; </p>
+<p><strong>这里千万注意！！！</strong><br>这种做法只能绑定一个事件处理函数，后面的会覆盖前面的。比如这里只会输出222，这只是其中一种</p>
+<p>还有写了监听器和两个内联的。</p>
+<h4 id="监听器的三个参数代表了什么含义"><a href="#监听器的三个参数代表了什么含义" class="headerlink" title="监听器的三个参数代表了什么含义"></a>监听器的三个参数代表了什么含义</h4><p>第一个参数是事件类型，比如点击(click)、双击(dbclick)</p>
+<p>第二个参数就是函数，触发事件后，需要执行的函数。</p>
+<p>第三个参数就是事件的捕获与冒泡， 为true时捕获，false时冒泡。</p>
+<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><h4 id="原型与原型链"><a href="#原型与原型链" class="headerlink" title="原型与原型链"></a>原型与原型链</h4><p>每一个构造函数的内部都有一个 prototype 属性值，这个属性值是一个对象，这个对象包含了可以由该构造函数的所有实例共享的属性和方法。当我们使用构造函数新建一个对象，在这个对象的内部将包含一个指针，这个指针指向构造函数的 prototype 属性对应的值，在 ES5 中这个指针被称为对象的原型。</p>
+<p>当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么它就会去它的原型象里找这个属性，这个原型对象又会有自己的原型，于是就这样一直找下去，也就是原型链的概念。</p>
+<p>属性constructor指回构造函数本身</p>
+<p>属性 proto 指向构造函数的prototype 原型对象</p>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><h4 id="Http协议的方法有哪些"><a href="#Http协议的方法有哪些" class="headerlink" title="Http协议的方法有哪些"></a>Http协议的方法有哪些</h4><ol>
+<li>GET：请求指定的页面信息，并返回实体主体。</li>
+<li>HEAD：类似于 GET 请求，只不过返回的响应中没有具体的内容，用于获取报头</li>
+<li>POST：向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含请求体中。POST 请求可能会导致新的资源的建立和&#x2F;或已有资源的修改。</li>
+<li>PUT：从客户端向服务器传送的数据取代指定的文档的内容。</li>
+<li>DELETE：请求服务器删除指定的页面。</li>
+<li>CONNECT：HTTP&#x2F;1.1 协议中预留给能够将连接改为管道方式的代理服务器。</li>
+<li>OPTIONS：允许客户端查看服务器的性能。</li>
+<li>TRACE：回显服务器收到的请求，主要用于测试或诊断。</li>
+</ol>
+<h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><p>301 永久性重定向，表示请求的资源已被分配了新的 URI<br>302 临时性重定向，资源的 URL 已临时定位到其他位置</p>
+<h4 id="OSI七层"><a href="#OSI七层" class="headerlink" title="OSI七层"></a>OSI七层</h4><h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><h4 id="vue2-0-与-vue3-0-数据双向绑定的区别"><a href="#vue2-0-与-vue3-0-数据双向绑定的区别" class="headerlink" title="vue2.0 与 vue3.0 数据双向绑定的区别"></a>vue2.0 与 vue3.0 数据双向绑定的区别</h4><p>vue2.x实现双向数据绑定的原理是利用Object.defineProperty() 这个方法重新定义了对象获取属性值(get)和设置属性值(set)的操作来实现的，当数据发生改变发出通知。<br>在MDN上对该方法的说明是：Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象。<br>它接收三个参数，要操作的对象，要定义或修改的对象属性名，属性描述符。重点就是最后的属性描述符。<br>属性描述符是一个对象，主要有两种形式：数据描述符和存取描述符。<br>这两种对象只能选择一种使用，不能混合两种描述符的属性同时使用。上面说的 get 和 set 就是属于存取描述符对象的属性。<br>然后我们可以通过在存取描述符中的get和set方法内写入自定义的逻辑来实现对象获取属性和设置属性时的行为。</p>
+<p>相比于vue2.x，vue3.0使用proxy的优势如下区别：</p>
+<ol>
+<li>可以省去for in、闭包等内容来提升效率（直接绑定整个对象即可）</li>
+<li>vue3.x可以监听到数组内部数据的变化，不用再去单独的对数组做特异性操作</li>
+<li>proxy可以劫持整个对象，并返回一个新对象</li>
+<li>Vue2.x版本中的双向绑定不能检测到下标的变化</li>
+<li>defineProperty只能监听某个属性，不能对全对象监听</li>
+</ol>
+<h4 id="vue生命周期以及每个大概的概述"><a href="#vue生命周期以及每个大概的概述" class="headerlink" title="vue生命周期以及每个大概的概述"></a>vue生命周期以及每个大概的概述</h4><ul>
+<li><strong>beforeCreate:</strong><br>在实例初始化之后，数据观测 (data observer) 和 event&#x2F;watcher 事件配置之前被调用。在new一个vue实例后，只有一些默认的生命周期钩子和默认事件，其他的东西都还没创建。在beforeCreate生命周期执行的时候，data和methods中的数据都还没有初始化。不能在这个阶段使用data中的数据和methods中的方法</li>
+<li><strong>created:</strong><br>在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (dataobserver)，roperty 和方法的运算，watch&#x2F;event 事件回调。然而，挂载阶段还没开始，$el property 目前尚不可用。data 和 methods都已经被初始化好了，如果要调用 methods 中的方法，或者操作 data 中的数据，最早可以在这个阶段中操作</li>
+<li><strong>beforeMount:</strong><br>在挂载开始之前被调用：相关的 render 函数首次被调用。执行到这个钩子的时候，在内存中已经编译好了模板了，但是还没有挂载到页面中，此时，页面还是旧的</li>
+<li><strong>mounted:</strong><br>实例被挂载后调用，这时 el 被新创建的 vm.$el 替换了。如果根实例挂载到了一个文档内的元素上，当 mounted 被调用时 vm.$el 也在文档内。执行到这个钩子的时候，就表示Vue实例已经初始化完成了。此时组件脱离了创建阶段，进入到了运行阶段。如果我们想要通过插件操作页面上的DOM节点，最早可以在这个阶段中进行</li>
+<li><strong>beforeUpdate:</strong><br>当执行这个钩子时，页面中的显示的数据还是旧的，data中的数据是更新后的， 页面还没有和最新的数据保持同步</li>
+<li><strong>updated:</strong><br>页面显示的数据和data中的数据已经保持同步了，都是最新的</li>
+<li><strong>beforeDestroy:</strong><br>Vue实例从运行阶段进入到了销毁阶段，这个时候上所有的 data 和 methods，指令，过滤器……都是处于可用状态，还没有真正被销毁</li>
+<li><strong>destroyed:</strong><br>这个时候上所有的 data 和 methods，指令，过滤器……都是处于不可用状态，组件已经被销毁了。</li>
+<li><strong>activated:</strong><br>被 keep-alive 缓存的组件激活时调用。</li>
+<li><strong>deactivated:</strong><br>被 keep-alive 缓存的组件停用时调用。</li>
+</ul>
+<h4 id="vue3核心原理"><a href="#vue3核心原理" class="headerlink" title="vue3核心原理"></a>vue3核心原理</h4><p>响应式系统：Vue 3使用了Proxy代理实现了更高效的响应式系统。当数据发生变化时，会自动触发视图的更新。这个特性使得Vue 3的性能比Vue 2更高效，且在处理大型应用程序时表现更加出色。</p>
+<p>组合式API：Vue 3提供了新的组合式API，使得开发者可以更好地组织和复用代码逻辑。通过这个API，我们可以将逻辑代码按功能划分为多个逻辑单元，然后可以将它们组合在一起使用，从而提高代码的可读性和可维护性。</p>
+<p>Teleport组件：Vue 3的Teleport组件可以在DOM层级中移动任意组件或元素，从而使得开发者可以更灵活地进行页面布局。</p>
+<p>Composition API：Vue 3的Composition API提供了更为灵活和可组合的功能，能够更好地与TypeScript等其他工具和库配合使用。</p>
+<p>性能优化：Vue 3在性能上做出了很多优化，例如将虚拟DOM的生成和比较算法进行了优化，使得页面渲染更加高效。同时，Vue 3还通过Tree Shaking等技术，使得打包后的代码更加轻量级。</p>
+<p>总的来说，Vue 3的核心原理在于响应式系统、组合式API和性能优化等方面的创新，使得Vue 3在开发效率、代码可维护性和性能等方面都有很大的提升。</p>
+<h4 id="watch和computed的区别，异步操作选哪个？"><a href="#watch和computed的区别，异步操作选哪个？" class="headerlink" title="watch和computed的区别，异步操作选哪个？"></a>watch和computed的区别，异步操作选哪个？</h4><ul>
+<li>computed支持缓存，只有依赖数据发生改变，才会重新进行计算;而watch不支持缓存，数据变，直接会触发相应的操作。</li>
+<li>computed不支持异步，当computed内有异步操作时无效，无法监听数据的变化;watch支持异步。</li>
+<li>computed属性值会默认走缓存，计算属性是基于它们的响应式依赖进行缓存的，也就是基于data中声明过或者父组件传递的props中的数据通过计算得到的值;而watch监听的函数接收两个参数，第一个参数是最新的值，第二个参数是输入之前的值。</li>
+<li>如果一个属性是由其它属性计算而来的，这个属性依赖其它属性，是一个多对一或者一对一，一般用computed;而当一个属性发生变化时，需要执行对应的操作;一对多一般用watch。</li>
+<li>如果computed属性属性值是函数，那么默认会走get方法;函数的返回值就是属性的属性值;在computed中的，属性都有一个get和一个set方法，当数据变化时，调用set方法。而watch监听数据必须是data中声明过或者父组件传递过来的props中的数据，当数据变化时，触发其它操作，函数有两个参数。</li>
+</ul>
+<h4 id="vue组件之间的通信"><a href="#vue组件之间的通信" class="headerlink" title="vue组件之间的通信"></a>vue组件之间的通信</h4><p>ref被用来给元素或子组件注册引用信息，引用信息将会注册在父组件的$refs对象上，如果是在普通的DOM 元素上使用，引用指向的就是DOM 元素，如果是在子组件上，引用就指向组件的实例。</p>
+<p>‘$refs’是一个对象，持有已注册过ref的所有的子组件。</p>
+<p>ref有三种用法：</p>
+<ol>
+<li>ref加在普通的元素上，用this.$refs.name获取到的是dom元素</li>
+<li>ref加在子组件上，用this.$refs.name获取到的是组件实例，可以使用组件的所有方法。</li>
+<li>利用v-for和ref获取一组数组或者dom节点。</li>
+</ol>
+<p>注意：</p>
+<ul>
+<li>ref需要在dom渲染完成后才会有，在使用的时候确保dom已经渲染完成。比如在生命周期mounted(){}钩子中调用，或者在this.$nextTick(()&#x3D;&gt;{})中调用。</li>
+<li>如果ref是循环出来的，有多个重名，那么ref的值会是一个数组，此时要拿到单个的ref只需要循环就可以了。</li>
+</ul>
+<h4 id="vue由什么可以优化的地方"><a href="#vue由什么可以优化的地方" class="headerlink" title="vue由什么可以优化的地方"></a>vue由什么可以优化的地方</h4><ul>
+<li>使用Vue.js的编译器来预编译Vue组件，以提高渲染速度。</li>
+<li>尽可能使用v-if代替v-show来避免在组件之间切换时重复渲染DOM元素。</li>
+<li>使用v-bind来动态地绑定属性和class，避免在DOM元素之间切换时重复渲染。</li>
+<li>避免在v-for循环中使用复杂的计算属性，尽可能将计算属性转移到数据中，以提高渲染速度。</li>
+<li>使用Vue.js的keep-alive组件来缓存已渲染的组件，以便在切换时快速重用。</li>
+<li>尽可能使用异步组件加载和懒加载来减少初始加载时间。</li>
+<li>对于大型应用程序，使用Vue.js的路由懒加载来延迟加载路由组件，以提高初始加载时间。</li>
+<li>避免频繁的操作DOM，尽可能使用Vue.js提供的指令和组件来处理DOM操作。</li>
+<li>使用Vue.js提供的响应式数据绑定来避免手动处理DOM事件和状态更新。</li>
+<li>对于需要大量数据的列表，使用Vue.js的虚拟滚动组件来提高性能并避免卡顿。<br>总的来说，优化Vue.js应用程序的最佳方法是避免不必要的DOM操作，减少网络请求和数据处理，并最大限度地利用Vue.js提供的优化工具和组件。</li>
+</ul>
+<h4 id="vue数据更新后的底层逻辑"><a href="#vue数据更新后的底层逻辑" class="headerlink" title="vue数据更新后的底层逻辑"></a>vue数据更新后的底层逻辑</h4><h4 id="vue3的优化"><a href="#vue3的优化" class="headerlink" title="vue3的优化"></a>vue3的优化</h4><ol>
+<li>在main.js中引入的不再是Vue构造函数，而是一个名为creatApp的工厂函数（不用通过new调用）</li>
+<li>创建实例对象方式不同，Vue2是用vm来创建对象，Vue3是用app来创建</li>
+<li>在main.js中不兼容Vue2的写法</li>
+<li>在Vue3的模板结构可以没有根标签，template中可以直接包其他标签</li>
+<li>Composition API 组合式API<ul>
+<li>setup是Vue3.0中一个新的配置项是个函数，所有数据方法都是setup中，用setup代替了data,methods,钩子等，当Vue2与Vue3混用时Vue3优先</li>
+<li>在setup中return需要返回数据</li>
+</ul>
+</li>
+<li>需要引入ref来实现响应式数据，但是，如果引用的是ref函数，在调用变量时需要加.value</li>
+<li>因此可以使用reactive函数来实现，但是reactive函数不能给基本类型使用，会报错；当对象类型的数据调用后，引用数据就不再需要加.value，可以直接调<ul>
+<li>reactive函数嵌套使用也很方便</li>
+<li>可以直接索引修改数组的数据</li>
+<li>会接收一个对象（或数组），返回一个代理对象（Proxy的实例对象，简称proxy对象）</li>
+<li>内部基于ES6的Proxy实现，通过代理对象操作源对象内部数据进行操作</li>
+</ul>
+</li>
+<li>Vue2响应式存在的问题在Vue3被解决了<ul>
+<li>进行新增属性、删除属性等操作时，数据改变了却没有被Vue2捕获，因此界面也不会发生变化</li>
+<li>直接通过下边修改数组，界面不会自动更新</li>
+</ul>
+</li>
+<li>Vue3用到了Proxy代理，Reflect反射<ul>
+<li>通过Proxy（代理）拦截对象中任意属性的变化</li>
+<li>通过Reflect（反射）对被代理对象的属性进行操作</li>
+</ul>
+</li>
+<li>Vue3的watch在监视reactive所定义的一个响应式数据没有oldValue，并且强制开启了深度监视，所以此时deep配置无效，但是如果是监视该数据中的某个属性时，deep配置奏效。</li>
+<li>watchEffect监视，立即执行，想监视啥，就在里面写啥，和computed有点像，但是computed有返回值。</li>
+<li>生命周期不同。</li>
+<li>hook函数，可以将同个功能的相关函数、钩子、数据包在一个js中，方便后续调用，整洁美观不凌乱</li>
+<li>provide inject实现祖先与后代组件通信</li>
+</ol>
+<h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><h4 id="浏览器的本地缓存方式"><a href="#浏览器的本地缓存方式" class="headerlink" title="浏览器的本地缓存方式"></a>浏览器的本地缓存方式</h4><p>localStorage，sessionStorage，cookie 的区别</p>
+<ol>
+<li>cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器来回传递<br>    sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存</li>
+<li>存储大小限制也不同<ul>
+<li>cookie数据不能超过4k</li>
+<li>sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以到5M(这个大小也问到了)或更大</li>
+</ul>
+</li>
+<li>数据有效期不同<ul>
+<li>sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；</li>
+<li>localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；</li>
+<li>cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭;</li>
+</ul>
+</li>
+<li>作用域不同<ul>
+<li>sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；</li>
+<li>localStorage 在所有同源窗口中都是共享的；</li>
+<li>cookie也是在所有同源窗口中都是共享的</li>
+</ul>
+</li>
+</ol>
+<h4 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h4><h4 id="普通刷新与强制刷新"><a href="#普通刷新与强制刷新" class="headerlink" title="普通刷新与强制刷新"></a>普通刷新与强制刷新</h4><h4 id="缓存相关知识"><a href="#缓存相关知识" class="headerlink" title="缓存相关知识"></a>缓存相关知识</h4><h4 id="如果我打开了页面A，又打开了页面B，此时我从页面B返回了页面A，如何实现页面A的数据还是我离开页面A时的数据？"><a href="#如果我打开了页面A，又打开了页面B，此时我从页面B返回了页面A，如何实现页面A的数据还是我离开页面A时的数据？" class="headerlink" title="如果我打开了页面A，又打开了页面B，此时我从页面B返回了页面A，如何实现页面A的数据还是我离开页面A时的数据？"></a>如果我打开了页面A，又打开了页面B，此时我从页面B返回了页面A，如何实现页面A的数据还是我离开页面A时的数据？</h4><p>使用浏览器的缓存机制：当用户从页面 A 跳转到页面 B 时，可以将页面 A 的数据存储到浏览器的缓存中。当用户从页面 B 返回页面 A 时，可以先检查缓存中是否存在页面 A 的数据，如果存在则直接从缓存中读取数据渲染页面，否则重新加载页面并获取数据。<br>当使用浏览器的缓存机制来实现页面数据的持久化时，可以使用以下步骤：</p>
+<ol>
+<li><p>在页面 A 中将需要持久化的数据存储到浏览器的缓存中。可以使用 localStorage 或 sessionStorage 对象来进行存储。这些对象提供了键值对的存储方式，并且可以存储字符串类型的数据。<br>例如，在页面 A 中可以使用以下代码将数据存储到 localStorage 中：</p>
+<p> localStorage.setItem(‘data’, JSON.stringify(data));</p>
+</li>
+</ol>
+<p>其中，data 是需要存储的数据对象，JSON.stringify 函数用于将对象转换为字符串。</p>
+<ol start="2">
+<li><p>当用户从页面 B 返回页面 A 时，可以检查缓存中是否存在页面 A 的数据。可以使用 localStorage 或 sessionStorage 对象的 getItem 方法来获取存储在缓存中的数据。<br>例如，在页面 A 中可以使用以下代码检查缓存中是否存在数据：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const data = localStorage.getItem(&#x27;data&#x27;);</span><br><span class="line">if (data) &#123;</span><br><span class="line">  // 缓存中存在数据，将数据解析为对象并渲染页面</span><br><span class="line">  render(JSON.parse(data));</span><br><span class="line">&#125; else &#123;</span><br><span class="line">  // 缓存中不存在数据，重新加载页面并获取数据</span><br><span class="line">  loadData();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>当用户再次离开页面 A 时，可以将数据从缓存中删除，以避免缓存过多无用数据占用浏览器的存储空间。可以使用 localStorage 或 sessionStorage 对象的 removeItem 方法来删除缓存中的数据。<br>例如，在页面 A 中可以使用以下代码删除缓存中的数据：</p>
+<p> localStorage.removeItem(‘data’);</p>
+</li>
+</ol>
+<p>使用浏览器的缓存机制来实现页面数据的持久化需要注意以下几点：</p>
+<ul>
+<li>缓存中存储的数据必须是字符串类型，因此需要将对象序列化为字符串或从字符串中解析为对象。</li>
+<li>缓存中的数据可能会被清除或过期，因此在获取数据时需要先检查数据是否存在，如果不存在则需要重新加载页面并获取数据。</li>
+<li>缓存中存储的数据会占用浏览器的存储空间，因此需要注意清理无用的数据以避免浏览器存储空间的浪费。</li>
+</ul>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><h4 id="数组去重用哪些方法"><a href="#数组去重用哪些方法" class="headerlink" title="数组去重用哪些方法"></a>数组去重用哪些方法</h4><ul>
+<li>利用Set()+Array.from()</li>
+<li>利用两层循环+数组的splice方法</li>
+<li>利用数组的indexOf方法</li>
+<li>利用数组的includes方法</li>
+<li>利用数组的filter()+indexOf()</li>
+</ul>
+<h4 id="堆栈和队列的区别"><a href="#堆栈和队列的区别" class="headerlink" title="堆栈和队列的区别"></a>堆栈和队列的区别</h4><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="你有了解过webpack吗？"><a href="#你有了解过webpack吗？" class="headerlink" title="你有了解过webpack吗？"></a>你有了解过webpack吗？</h4><p>Webpack是一个开源的前端构建工具，它可以将多个模块打包成一个或多个浏览器可识别的JavaScript文件。Webpack提供了一个灵活的插件系统，可以通过配置文件对其进行配置以满足各种不同的构建需求。</p>
+<p>Webpack的主要功能包括：</p>
+<ul>
+<li>模块化管理：Webpack可以将JavaScript代码拆分成多个模块，每个模块可以独立开发、测试和维护，然后通过Webpack打包成一个或多个JavaScript文件，使得代码的复用性和可维护性得到提升。</li>
+<li>资源加载器：Webpack支持加载各种类型的文件，包括JavaScript、CSS、图片等，并提供了丰富的加载器，可以对各种类型的文件进行处理，例如使用babel-loader对ES6语法进行转换，使用css-loader和style-loader对CSS文件进行处理等。</li>
+<li>代码分割：Webpack支持将代码拆分成多个包，并根据需要异步加载，从而实现按需加载和提高页面加载速度的目的。</li>
+<li>插件系统：Webpack提供了丰富的插件系统，可以通过配置文件对其进行配置以满足各种不同的构建需求，例如压缩代码、提取公共代码、生成HTML模板等。</li>
+</ul>
+<p>总的来说，Webpack可以帮助我们更方便、高效地管理和打包项目中的各种资源，提高项目的可维护性和性能。</p>
+<h4 id="git-merge-git-rebase的区别"><a href="#git-merge-git-rebase的区别" class="headerlink" title="git merge,git rebase的区别"></a>git merge,git rebase的区别</h4><p>git merge 和 git rebase 都是 Git 版本控制系统中用于合并代码分支的命令，但是它们的实现方式不同。</p>
+<p>git merge 命令会将两个不同的分支合并成一个新的分支。它会创建一个新的提交来整合两个分支的更改，并将这个新的提交添加到当前分支中。使用 git merge 时，需要先切换到要接收合并的分支，然后执行命令。</p>
+<p>例如，假设当前在分支 A 上，要将分支 B 合并到分支 A 上：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout A</span><br><span class="line">git merge B</span><br></pre></td></tr></table></figure>
+<p>这会将分支 B 中的更改合并到分支 A 中，并生成一个新的合并提交。</p>
+<p>git rebase 命令的作用是将当前分支的提交基础转移到另一个分支上。这意味着 Git 会将当前分支的所有提交按照时间顺序依次应用到目标分支上，使得目标分支的历史记录变得更加线性。使用 git rebase 时，需要先切换到要接收变基的分支，然后执行命令。</p>
+<p>例如，假设当前在分支 A 上，要将分支 A 变基到分支 B 上：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout A</span><br><span class="line">git rebase B</span><br></pre></td></tr></table></figure>
+<p>这会将分支 A 上的提交基础转移到分支 B 上，并生成一个新的历史记录。请注意，由于重新应用提交，这可能会改变提交的哈希值，因此需要小心处理可能影响其他人协作的提交。</p>
+<p>最主要的区别在于合并历史记录的方式不同。</p>
+<p>git merge 命令将两个分支的历史记录合并成一个新的提交，并将该新提交添加到当前分支上，从而创建一个新的合并分支。这样做可以保留原始分支的历史记录，但会创建一个额外的合并提交，使得历史记录更加分叉。</p>
+<p>git rebase 命令会将当前分支的历史记录“移动”到目标分支上，并重新应用每个提交。这样做可以使得历史记录更加线性，但会破坏原始分支的历史记录，因为提交的哈希值会发生变化。</p>
+<p>总的来说，如果只是想简单地将两个分支合并，那么使用 git merge 更为直观和简单。但如果您想要保持一个线性的历史记录，或者需要在协作时避免创建额外的合并提交，那么使用 git rebase 更为合适。</p>
+<h4 id="npm和yarn的区别"><a href="#npm和yarn的区别" class="headerlink" title="npm和yarn的区别"></a>npm和yarn的区别</h4><p>npm是一个包管理器，它让 javascript 开发者分享、复用代码更方便.在程序开发中我们常常需要依赖别人提供的框架，写js 也不例外。这些可以重复的框架代码被称作包(package)或者模块(module)，一个包可以是一个文件夹里放着几个文件，同时有一个叫做 package.json的文件。</p>
+<p>npm（node package manager）：node.js 的包管理器，用于node插件管理（包括安装、卸载、管理依赖等） ，npm 是随同 node.js 一起安装的包管理工具，能解决 node.js 代码部署上的很多问题，常见的使用场景有以下几种：<br>1.允许用户从 npm 服务器下载别人编写的第三方包到本地使用。<br>允许用户从 npm 服务器下载并安装别人编写的命令行程序到本地使用。<br>允许用户将自己编写的包或命令行程序上传到 npm 服务器供别人使用。</p>
+<p>npm 的缺陷：npm install 下载速度慢，重新 install 时速度依旧慢。<br>同一个项目，安装的无法保持一致性。原因是因为 package.json 文件中版本号的特点导致的，下面三个版本号在安装的时候代表不同的含义。<br>“5.0.3” # 表示安装指定的5.0.3版本<br>“~5.0.3” # 表示安装5.0.X中最新的版本<br>“^5.0.3” # 表示安装5.X.X中最新的版本</p>
+<p>使用 npm 安装多个 js 包时，包会在同一时间下载和安装。安装过程中，其中一个包抛出了一个异常，但 npm 会继续安装其他包，所以错误信息就会在一大堆提示信息中丢失掉，以至于直到执行前，都不会发现实际发生的错误。</p>
+<p>yarn 是由 Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具，yarn 是为了弥补 npm 的一些缺陷而出现的。</p>
+<p>Yarn 优点<br>1.速度快 。速度快主要来自以下两个方面：</p>
+<p>2.并行安装：无论 npm 还是 Yarn 在执行包的安装时，都会执行一系列任务。npm 是按照队列执行每个 package，也就是说必须要等到当前 package 安装完成之后，才能继续后面的安装。而 Yarn 是同步执行所有任务，提高了性能。</p>
+<p>3.离线模式：如果之前已经安装过一个软件包，用Yarn再次安装时之间从缓存中获取，就不用像npm那样再从网络下载了。</p>
+<p>4.安装版本统一：为了防止拉取到不同的版本，Yarn 有一个锁定文件 (lock file) 记录了被确切安装上的模块的版本号。每次只要新增了一个模块，Yarn 就会创建（或更新）yarn.lock 这个文件。这么做就保证了，每一次拉取同一个项目依赖时，使用的都是一样的模块版本。npm 其实也有办法实现处处使用相同版本的 packages，但需要开发者执行 npm shrinkwrap 命令。这个命令将会生成一个锁定文件，在执行 npm install 的时候，该锁定文件会先被读取，和 Yarn 读取 yarn.lock 文件一个道理。npm 和 Yarn 两者的不同之处在于，Yarn 默认会生成这样的锁定文件，而 npm 要通过 shrinkwrap 命令生成 npm-shrinkwrap.json 文件，只有当这个文件存在的时候，packages 版本信息才会被记录和更新。</p>
+<p>5.更简洁的输出：npm 的输出信息比较冗长。在执行 npm install 的时候，命令行里会不断地打印出所有被安装上的依赖。相比之下，Yarn 简洁太多：默认情况下，结合了 emoji直观且直接地打印出必要的信息，也提供了一些命令供开发者查询额外的安装信息。</p>
+<p>6.多注册来源处理：所有的依赖包，不管他被不同的库间接关联引用多少次，安装这个包时，只会从一个注册来源去装，要么是 npm 要么是 bower, 防止出现混乱不一致。</p>
+<p>7.更好的语义化： yarn改变了一些npm命令的名称，比如 yarn add&#x2F;remove，感觉上比 npm 原本的 install&#x2F;uninstall 要更清晰。</p>
+<h4 id="你认为一个好的前端技术人员需要具备什么能力"><a href="#你认为一个好的前端技术人员需要具备什么能力" class="headerlink" title="你认为一个好的前端技术人员需要具备什么能力"></a>你认为一个好的前端技术人员需要具备什么能力</h4><h4 id="如何提升用户体验"><a href="#如何提升用户体验" class="headerlink" title="如何提升用户体验"></a>如何提升用户体验</h4><h4 id="如何加快页面加载速度"><a href="#如何加快页面加载速度" class="headerlink" title="如何加快页面加载速度"></a>如何加快页面加载速度</h4><h4 id="描述一下做的项目"><a href="#描述一下做的项目" class="headerlink" title="描述一下做的项目"></a>描述一下做的项目</h4>
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>Wendy<br>
+        <strong>本文链接：</strong><a href="https://wendy-ljw.github.io/2023/03/17/sum-1/" title="https:&#x2F;&#x2F;wendy-ljw.github.io&#x2F;2023&#x2F;03&#x2F;17&#x2F;sum-1&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;wendy-ljw.github.io&#x2F;2023&#x2F;03&#x2F;17&#x2F;sum-1&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%80%BB%E7%BB%93/">总结</a>
+    
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">面试总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML"><span class="toc-number">1.1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-number">1.2.</span> <span class="toc-text">CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS%E7%9B%92%E6%A8%A1%E5%9E%8B%E4%BB%A5%E5%8F%8A%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D"><span class="toc-number">1.2.1.</span> <span class="toc-text">CSS盒模型以及有哪几种</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#flex-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">flex:1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%BB%E4%B8%80%E6%9D%A10-5px%E7%9A%84%E7%BA%BF"><span class="toc-number">1.2.3.</span> <span class="toc-text">画一条0.5px的线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F%E4%B8%8E%E6%A0%B7%E5%BC%8F%E8%A1%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.4.</span> <span class="toc-text">内联样式与样式表的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="toc-number">1.2.5.</span> <span class="toc-text">如何实现水平垂直居中</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Javascript"><span class="toc-number">1.3.</span> <span class="toc-text">Javascript</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#js%E6%80%A7%E8%83%BD%E7%9A%84%E4%BC%98%E5%8C%96"><span class="toc-number">1.3.1.</span> <span class="toc-text">js性能的优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Js%E8%B7%A8%E5%9F%9F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.3.2.</span> <span class="toc-text">Js跨域的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#this%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">1.3.3.</span> <span class="toc-text">this的作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#js%E5%AE%9E%E7%8E%B0%E7%BB%A7%E6%89%BF%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.4.</span> <span class="toc-text">js实现继承的方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1"><span class="toc-number">1.3.5.</span> <span class="toc-text">事件捕获与事件冒泡</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-number">1.3.6.</span> <span class="toc-text">图片懒加载如何实现？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#js%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%90%86%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.3.7.</span> <span class="toc-text">js实现代理和事件冒泡的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.3.8.</span> <span class="toc-text">防抖节流的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AD%E5%8C%85"><span class="toc-number">1.3.9.</span> <span class="toc-text">闭包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E4%BB%A3%E7%90%86%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.10.</span> <span class="toc-text">点击事件代理的几种方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%91%E5%90%AC%E5%99%A8%E7%9A%84%E4%B8%89%E4%B8%AA%E5%8F%82%E6%95%B0%E4%BB%A3%E8%A1%A8%E4%BA%86%E4%BB%80%E4%B9%88%E5%90%AB%E4%B9%89"><span class="toc-number">1.3.11.</span> <span class="toc-text">监听器的三个参数代表了什么含义</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6"><span class="toc-number">1.4.</span> <span class="toc-text">ES6</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-number">1.4.1.</span> <span class="toc-text">原型与原型链</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP"><span class="toc-number">1.5.</span> <span class="toc-text">HTTP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Http%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-number">1.5.1.</span> <span class="toc-text">Http协议的方法有哪些</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">1.5.2.</span> <span class="toc-text">状态码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OSI%E4%B8%83%E5%B1%82"><span class="toc-number">1.5.3.</span> <span class="toc-text">OSI七层</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue"><span class="toc-number">1.6.</span> <span class="toc-text">Vue</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vue2-0-%E4%B8%8E-vue3-0-%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.6.1.</span> <span class="toc-text">vue2.0 与 vue3.0 数据双向绑定的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BB%A5%E5%8F%8A%E6%AF%8F%E4%B8%AA%E5%A4%A7%E6%A6%82%E7%9A%84%E6%A6%82%E8%BF%B0"><span class="toc-number">1.6.2.</span> <span class="toc-text">vue生命周期以及每个大概的概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue3%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86"><span class="toc-number">1.6.3.</span> <span class="toc-text">vue3核心原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#watch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8C%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E9%80%89%E5%93%AA%E4%B8%AA%EF%BC%9F"><span class="toc-number">1.6.4.</span> <span class="toc-text">watch和computed的区别，异步操作选哪个？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1"><span class="toc-number">1.6.5.</span> <span class="toc-text">vue组件之间的通信</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue%E7%94%B1%E4%BB%80%E4%B9%88%E5%8F%AF%E4%BB%A5%E4%BC%98%E5%8C%96%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="toc-number">1.6.6.</span> <span class="toc-text">vue由什么可以优化的地方</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0%E5%90%8E%E7%9A%84%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91"><span class="toc-number">1.6.7.</span> <span class="toc-text">vue数据更新后的底层逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue3%E7%9A%84%E4%BC%98%E5%8C%96"><span class="toc-number">1.6.8.</span> <span class="toc-text">vue3的优化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-number">1.7.</span> <span class="toc-text">浏览器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98%E6%96%B9%E5%BC%8F"><span class="toc-number">1.7.1.</span> <span class="toc-text">浏览器的本地缓存方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6"><span class="toc-number">1.7.2.</span> <span class="toc-text">垃圾回收机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E5%88%B7%E6%96%B0%E4%B8%8E%E5%BC%BA%E5%88%B6%E5%88%B7%E6%96%B0"><span class="toc-number">1.7.3.</span> <span class="toc-text">普通刷新与强制刷新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="toc-number">1.7.4.</span> <span class="toc-text">缓存相关知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%88%91%E6%89%93%E5%BC%80%E4%BA%86%E9%A1%B5%E9%9D%A2A%EF%BC%8C%E5%8F%88%E6%89%93%E5%BC%80%E4%BA%86%E9%A1%B5%E9%9D%A2B%EF%BC%8C%E6%AD%A4%E6%97%B6%E6%88%91%E4%BB%8E%E9%A1%B5%E9%9D%A2B%E8%BF%94%E5%9B%9E%E4%BA%86%E9%A1%B5%E9%9D%A2A%EF%BC%8C%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%A1%B5%E9%9D%A2A%E7%9A%84%E6%95%B0%E6%8D%AE%E8%BF%98%E6%98%AF%E6%88%91%E7%A6%BB%E5%BC%80%E9%A1%B5%E9%9D%A2A%E6%97%B6%E7%9A%84%E6%95%B0%E6%8D%AE%EF%BC%9F"><span class="toc-number">1.7.5.</span> <span class="toc-text">如果我打开了页面A，又打开了页面B，此时我从页面B返回了页面A，如何实现页面A的数据还是我离开页面A时的数据？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.8.</span> <span class="toc-text">数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E7%94%A8%E5%93%AA%E4%BA%9B%E6%96%B9%E6%B3%95"><span class="toc-number">1.8.1.</span> <span class="toc-text">数组去重用哪些方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A0%86%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.8.2.</span> <span class="toc-text">堆栈和队列的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">1.9.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%A0%E6%9C%89%E4%BA%86%E8%A7%A3%E8%BF%87webpack%E5%90%97%EF%BC%9F"><span class="toc-number">1.9.1.</span> <span class="toc-text">你有了解过webpack吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-merge-git-rebase%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.9.2.</span> <span class="toc-text">git merge,git rebase的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#npm%E5%92%8Cyarn%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.9.3.</span> <span class="toc-text">npm和yarn的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%A0%E8%AE%A4%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9A%84%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E4%BA%BA%E5%91%98%E9%9C%80%E8%A6%81%E5%85%B7%E5%A4%87%E4%BB%80%E4%B9%88%E8%83%BD%E5%8A%9B"><span class="toc-number">1.9.4.</span> <span class="toc-text">你认为一个好的前端技术人员需要具备什么能力</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C"><span class="toc-number">1.9.5.</span> <span class="toc-text">如何提升用户体验</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%8A%A0%E5%BF%AB%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6"><span class="toc-number">1.9.6.</span> <span class="toc-text">如何加快页面加载速度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E5%81%9A%E7%9A%84%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.9.7.</span> <span class="toc-text">描述一下做的项目</span></a></li></ol></li></ol></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1680706306563"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+</body>
+
+</html>
