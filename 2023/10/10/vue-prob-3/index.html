@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>7-9月杂疑 - Wendy</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="/assets/tx0001.png" type="image/png" />
+    <meta name="description" content="2023.07.05 vscode 中的 jsconfig.json 文件首行无故报错解：打开配置 setting.json 文件，让自定义的 jsconfig.js 文件覆盖 vscode 默认选项  2023.07.26 echarts 的基础配置项   tooltip 配置提示框 legend 配置图例 color 配置颜色 graphic 配置表中的图形元素 series 配置图表的数据系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7-9月杂疑">
+<meta property="og:url" content="https://wendy-ljw.github.io/2023/10/10/vue-prob-3/index.html">
+<meta property="og:site_name" content="Wendy">
+<meta property="og:description" content="2023.07.05 vscode 中的 jsconfig.json 文件首行无故报错解：打开配置 setting.json 文件，让自定义的 jsconfig.js 文件覆盖 vscode 默认选项  2023.07.26 echarts 的基础配置项   tooltip 配置提示框 legend 配置图例 color 配置颜色 graphic 配置表中的图形元素 series 配置图表的数据系">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-10-10T12:05:03.000Z">
+<meta property="article:modified_time" content="2023-10-10T12:15:16.272Z">
+<meta property="article:author" content="Wendy">
+<meta property="article:tag" content="vue">
+<meta name="twitter:card" content="summary">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"
+    />
+    
+        <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3763712_by4sjqrtp9w.css">
+    
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1696940487394">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1696940487394">
+    <link rel="stylesheet" href="/css/style.css?v=1696940487394">
+     
+    
+        <link rel="stylesheet" href="/custom.css">
+    
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(/assets/bjt/b0001.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="Wendy" class="mdui-btn mdui-btn-icon"><img src="/assets/tx0001.png" alt="Wendy"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="Wendy">
+            <img src="/assets/tx0001.png" alt="Wendy" alt="Wendy">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>17</div>
+        <div><span>标签</span>13</div>
+        <div><span>分类</span>6</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://onlineweb.zhihuishu.com/onlinestuh5" target="_blank" mdui-tooltip="{content: '智慧树'}" style="color: rgb(60,179,113);background-color: rgba(60,179,113,.15);">
+            <i class="nexmoefont icon-tree"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/107170390" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/Wendy-ljw/wendy-ljw.github.io" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://www.cqut.edu.cn/" target="_blank" mdui-tooltip="{content: 'CQUT'}" style="color: rgb(68,206,246);background-color: rgba(68,206,246,.15);">
+            <i class="nexmoefont icon-home"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/总结/">总结</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/杂疑/">杂疑</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/种类/">种类</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/笔记/">笔记</a>
+          <span class="category-list-count">11</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/面试/">面试</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/element-ui/" style="font-size: 10px;">element-ui</a> <a href="/tags/es6/" style="font-size: 17.5px;">es6</a> <a href="/tags/git/" style="font-size: 12.5px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/vue/" style="font-size: 15px;">vue</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">标签</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2023 Wendy
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <br><script data-ad-client="ca-pub-2058306854838448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: 41.66666666666667%;"> 
+              <img src="/assets/bjt/b0002.jpg" alt="7-9月杂疑" loading="lazy">
+              <h1>7-9月杂疑</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年10月10日</a>
+</div>
+
+      <h4 id="2023-07-05"><a href="#2023-07-05" class="headerlink" title="2023.07.05"></a>2023.07.05</h4><blockquote>
+<p>vscode 中的 jsconfig.json 文件首行无故报错<br>解：打开配置 setting.json 文件，让自定义的 jsconfig.js 文件覆盖 vscode 默认选项</p>
+</blockquote>
+<h4 id="2023-07-26"><a href="#2023-07-26" class="headerlink" title="2023.07.26"></a>2023.07.26</h4><blockquote>
+<p>echarts 的基础配置项</p>
+</blockquote>
+<ul>
+<li>tooltip 配置提示框</li>
+<li>legend 配置图例</li>
+<li>color 配置颜色</li>
+<li>graphic 配置表中的图形元素</li>
+<li>series 配置图表的数据系列</li>
+</ul>
+<h4 id="2023-08-25"><a href="#2023-08-25" class="headerlink" title="2023.08.25"></a>2023.08.25</h4><blockquote>
+<p>写大屏的时候用到了@click.stop，复习了一下事件修饰符</p>
+</blockquote>
+<ul>
+<li>stop 阻止冒泡</li>
+<li>prevent 阻止默认行为</li>
+<li>capture 实现捕获触发事件的机智</li>
+<li>self 只有点击当前元素的时候，才会出发处理函数，不会冒泡</li>
+<li>once 只触发一次</li>
+</ul>
+<h4 id="2023-09-19"><a href="#2023-09-19" class="headerlink" title="2023.09.19"></a>2023.09.19</h4><blockquote>
+<p>如何在小程序地图上实现覆盖手绘地图</p>
+</blockquote>
+<ul>
+<li>小程序个性化地图扩展功能</li>
+<li>小程序内嵌 webview</li>
+<li>应用 MapContext.addGroundOverlay 接口<ul>
+<li>index.wxml<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">map</span></span></span><br><span class="line"><span class="tag">  <span class="attr">id</span>=<span class="string">&quot;map&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">latitude</span>=<span class="string">&quot;&#123;&#123;latitude&#125;&#125;&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">longitude</span>=<span class="string">&quot;&#123;&#123;longitude&#125;&#125;&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">style</span>=<span class="string">&quot;width: 100%;height:1414rpx;&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>index.js<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 页面的初始数据</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="attr">data</span>: &#123;</span><br><span class="line">    <span class="attr">latitude</span>: <span class="number">30.580251</span>,</span><br><span class="line">    <span class="attr">longitude</span>: <span class="number">104.277677</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 生命周期函数--监听页面加载</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="attr">onLoad</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.mapCtx = wx.createMapContext(<span class="string">&quot;map&quot;</span>);</span><br><span class="line">    <span class="built_in">this</span>.mapCtx.addGroundOverlay(&#123;</span><br><span class="line">      <span class="attr">id</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">src</span>: <span class="string">&quot;../image/sctu.png&quot;</span>,</span><br><span class="line">      <span class="attr">bounds</span>: &#123;</span><br><span class="line">        <span class="attr">southwest</span>: &#123;</span><br><span class="line">          <span class="comment">//西南角</span></span><br><span class="line">          <span class="attr">latitude</span>: <span class="number">30.576161</span>,</span><br><span class="line">          <span class="attr">longitude</span>: <span class="number">104.272544</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">northeast</span>: &#123;</span><br><span class="line">          <span class="comment">//东北角</span></span><br><span class="line">          <span class="attr">latitude</span>: <span class="number">30.585218</span>,</span><br><span class="line">          <span class="attr">longitude</span>: <span class="number">104.285232</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="function"><span class="title">success</span>(<span class="params">res</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;wp&quot;</span>, res);</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="function"><span class="title">fail</span>(<span class="params">err</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;wperr&quot;</span>, err);</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h4 id="SPA（single-page-application）-优缺点"><a href="#SPA（single-page-application）-优缺点" class="headerlink" title="SPA（single-page application） 优缺点"></a>SPA（single-page application） 优缺点</h4><blockquote>
+<p>SPA 是一种网络应用程序或网站的模型，它通过动态重写当前页面来与用户交互，这种方法避免了页面之间切换打断用户体验</p>
+</blockquote>
+<ul>
+<li>优点：<ul>
+<li>无刷新切换内容，提高用户体验</li>
+<li>符合前后端分离的开发思想，通过 ajax 异步请求数据接口获取数据，后台只需要负责数据，不用考虑渲染</li>
+<li>减轻服务器压力，展示逻辑和数据渲染在前端完成，服务器任务更明确，压力减轻</li>
+<li>后端数据接口可复用，设计 JSON 格式数据可以在 PC、移动端通用</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>不利于 SEO（搜索引擎优化），应用数据是通过请求接口动态渲染，不利于 SEO</li>
+<li>首页加载慢，SPA 下大部分的资源需要在首页加载，造成首页白屏等问题</li>
+</ul>
+</li>
+</ul>
+<h4 id="HTML标签的-enctype-属性"><a href="#HTML标签的-enctype-属性" class="headerlink" title="HTML标签的 enctype 属性"></a>HTML<form>标签的 enctype 属性</h4><blockquote>
+<p>规定在发送到服务器之前应该如何对表单数据进行编码</p>
+</blockquote>
+<ul>
+<li>application&#x2F;x-www-form-urlrncoded 在发送前编码所有字符（默认）</li>
+<li>multipart&#x2F;form-data 不对字符编码。在使用文件上传的表单时，必须使用该值</li>
+<li>text&#x2F;plain 空格转换为“+”加号，但不对特殊字符编码</li>
+</ul>
+<h4 id="try…catch能否捕获异步和语法错误？"><a href="#try…catch能否捕获异步和语法错误？" class="headerlink" title="try…catch能否捕获异步和语法错误？"></a>try…catch能否捕获异步和语法错误？</h4><p>在JavaScript中，try…catch语句可以捕获同步代码中的错误，但无法捕获异步错误。当使用异步操作（如Promise、async&#x2F;await）时，错误将在调用栈中的不同位置触发，并且无法通过常规的try…catch语句捕获。</p>
+<p>对于异步错误，您可以使用Promise的.catch()方法或async&#x2F;await结构中的try…catch块来捕获错误。这样可以处理异步操作中的错误，并采取相应的措施。</p>
+<p>至于语法错误，try…catch同样无法捕获它们。语法错误在代码解析阶段就会被JavaScript引擎检测到，并且无法通过try…catch来捕获和处理。在编写代码时，应该注意避免语法错误，以确保代码的正确性。</p>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>Wendy<br>
+        <strong>本文链接：</strong><a href="https://wendy-ljw.github.io/2023/10/10/vue-prob-3/" title="https:&#x2F;&#x2F;wendy-ljw.github.io&#x2F;2023&#x2F;10&#x2F;10&#x2F;vue-prob-3&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;wendy-ljw.github.io&#x2F;2023&#x2F;10&#x2F;10&#x2F;vue-prob-3&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%9D%82%E7%96%91/">杂疑</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/vue/" rel="tag">vue</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#2023-07-05"><span class="toc-number">1.</span> <span class="toc-text">2023.07.05</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2023-07-26"><span class="toc-number">2.</span> <span class="toc-text">2023.07.26</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2023-08-25"><span class="toc-number">3.</span> <span class="toc-text">2023.08.25</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2023-09-19"><span class="toc-number">4.</span> <span class="toc-text">2023.09.19</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SPA%EF%BC%88single-page-application%EF%BC%89-%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">5.</span> <span class="toc-text">SPA（single-page application） 优缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML%E6%A0%87%E7%AD%BE%E7%9A%84-enctype-%E5%B1%9E%E6%80%A7"><span class="toc-number">6.</span> <span class="toc-text">HTML标签的 enctype 属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#try%E2%80%A6catch%E8%83%BD%E5%90%A6%E6%8D%95%E8%8E%B7%E5%BC%82%E6%AD%A5%E5%92%8C%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF%EF%BC%9F"><span class="toc-number">7.</span> <span class="toc-text">try…catch能否捕获异步和语法错误？</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1696940487400"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+</body>
+
+</html>
